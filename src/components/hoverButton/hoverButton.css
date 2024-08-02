@@ -1,0 +1,46 @@
+.hoverButton {
+    text-decoration: none;
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .hoverButtonContent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .hoverButtonTitle {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hoverButtonTitle .textUp,
+  .hoverButtonTitle .textDown {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .hoverButtonTitle .textUp {
+    transform: translateY(0);
+  }
+  
+  .hoverButtonTitle .textDown {
+    position: absolute;
+    left: 0;
+    top: 100%; /* Start below the view */
+    transform: translateY(0);
+  }
+  
+  .hoverButton:hover .textUp {
+    transform: translateY(-100%);
+  }
+  
+  .hoverButton:hover .textDown {
+    transform: translateY(-100%);
+  }

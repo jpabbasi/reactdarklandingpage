@@ -1,0 +1,61 @@
+.headerMain {
+    position: fixed;
+    width: 100%;
+    background-color: transparent; /* Keeps the header transparent */
+    padding: 2rem 32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensures it stays on top */
+  }
+  
+  .headerContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .siteName {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .navLinks a {
+    margin-left: 2rem;
+    color: var(--color-light);
+  }
+
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+  }
+  
+
+  /* Responsive adjustments */
+
+  /* Styles for phones */
+  @media (max-width: 480px) {
+
+  }
+  
+  /* Medium Devices (Tablets, 481px to 768px) */
+  @media (min-width: 481px) and (max-width: 1024px) {
+    .headerMain {
+    padding: 2rem 5rem;
+    }
+
+    .navLinks {
+      gap: 0.5rem;
+      }
+
+    .navTitle {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 2000px) {
+    .headerMain {
+    padding: 2rem 10rem;
+    } }
