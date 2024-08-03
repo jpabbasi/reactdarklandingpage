@@ -9,19 +9,12 @@
 }
 
 :root {
-  --primary-hue: 270;
-  --black-lightness: 15%;
-  --dark-lightness: 44%;
-  --light-lightness: 94%;
-  --white-lightness: 100%;
-  --color-primary: #121212;
+  --color-primary: #181818;
   --color-secondary: #1a1a1a;
-  --color-white: hsl(0, 5%, var(--white-lightness));
-  --color-light: #f6f6f6;
-  --color-beluga: #4a4843;
-  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
-  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
-
+  --color-light: #f9f9f9;
+  --color-grey: #969696;
+  --transparent-1: rgba(255, 255, 255, 0.1);
+  --transparent-2: rgba(255, 255, 255, 0.2);
 }
 
 html {
@@ -29,8 +22,8 @@ html {
 }
 
 @font-face {
-  font-family: 'Chillax';
-  src: url('./fonts/Chillax.ttf') format('truetype');
+  font-family: 'Reef';
+  src: url('./fonts/Reef.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -40,7 +33,7 @@ h1 {
 }
 
 body {
-  font-family: 'Chillax', sans-serif;
+  font-family: 'Reef', sans-serif;
   background-color: var(--color-primary);
   line-height: 1.6;
   color: var(--color-light);
