@@ -12,9 +12,12 @@
   --color-primary: #181818;
   --color-secondary: #1a1a1a;
   --color-light: #f9f9f9;
-  --color-grey: #969696;
+  --color-grey: #7c7c7c;
+  --color-grey-2: #969696;
+  --color-light-grey: #e6e6e6;
   --transparent-1: rgba(255, 255, 255, 0.1);
   --transparent-2: rgba(255, 255, 255, 0.2);
+  --border-radius: 8px;
 }
 
 html {
@@ -22,21 +25,30 @@ html {
 }
 
 @font-face {
-  font-family: 'Reef';
-  src: url('./fonts/Reef.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Dosis';
+  src: url('./fonts/Dosis.ttf') format('truetype');
 }
 
 h1 {
+  font-weight: lighter;
+}
+
+h2 {
+  color: var(--color-secondary);
   font-weight: normal;
 }
 
+h3 {
+  font-size: 1.2rem;
+  color: var(--color-grey);
+  font-weight: lighter;
+}
+
 body {
-  font-family: 'Reef', sans-serif;
+  font-family: 'Dosis', sans-serif;
   background-color: var(--color-primary);
   line-height: 1.6;
-  color: var(--color-light);
+  color: var(--color-primary);
 
   margin: 0;
   -webkit-font-smoothing: antialiased;
