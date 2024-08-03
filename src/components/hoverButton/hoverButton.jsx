@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import './hoverButton.css';
 
-function HoverButton({ title, link, icon }) {
+function HoverButton({ title, link, icon, variant }) {
   return (
-    <Link to={link} className="hoverButton">
+    <Link to={link} className={`hoverButton ${variant}`}>
       <div className="hoverButtonContent">
         {icon}
         <div className="hoverButtonTitle">
