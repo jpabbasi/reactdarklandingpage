@@ -1,0 +1,57 @@
+.whiteBoard {
+  padding: 3rem 32rem;
+  background-color: var(--color-light)
+}
+
+.whiteBoard p {
+  color: var(--color-grey);
+}
+
+.whiteBoard h1 {
+  line-height: 3.5rem;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+.whiteBoard h3 {
+  line-height: 1.5rem;
+}
+
+.cardTitle {
+  display: flex;
+  flex: row;
+  align-items: center;
+}
+
+.servicesText {
+  gap: 0.5rem;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.servicesFlex {
+  align-items: stretch; 
+  gap: 2rem;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Small Devices */
+@media (max-width: 800px) {
+}
+
+/* Medium Devices */
+@media (min-width: 481px) and (max-width: 1024px) {
+  }
+
+
+/* Normal Devices */
+@media (min-width: 1024px) and (max-width: 2000px) {
+  .whiteBoard {
+    padding: 3rem 16rem;
+  }
+
+}

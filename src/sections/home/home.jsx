@@ -1,12 +1,16 @@
-import React from 'react'
+import './home.css'
+import LogoBar from './../../components/logoBar/logoBar';
+import Title from './title/title';
+import ServicesCards from './servicesCards/servicesCards';
 
 const Home = () => {
-
   return (
     <div>
-      <header>
-        {/* <h1>Welcome to My Homepage</h1> */}
-      </header>
+        {<Title/>}
+      <div className='whiteBoard'>
+        {<LogoBar/>}
+        {<ServicesCards/>}
+      </div>
     </div>
   )
 }
