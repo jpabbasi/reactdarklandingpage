@@ -1,0 +1,21 @@
+.cardTitle {
+    display: flex;
+    flex: row;
+    align-items: center;
+  }
+  
+  .servicesText {
+    gap: 0.5rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+  
+  .servicesFlex {
+    align-items: stretch; 
+    gap: 2rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
