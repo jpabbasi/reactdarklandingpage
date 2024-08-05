@@ -1,14 +1,15 @@
 .hoverButton {
-  font-size: 0.8rem;
-    text-decoration: none;
-    color: var(--color-light);
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 5px 10px;
-    transition: color 0.3s ease-in-out;
-    border-radius: var(--border-radius); 
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-light);
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+  border-radius: var(--border-radius); 
+  width: auto;
   }
 
   /* Variant 1: Default */
@@ -28,7 +29,7 @@
 .hoverButton.ghost {
   background-color: var(--transparent-1);
   border: 0.50px solid var(--transparent-1);
-  color: white;
+  color: var(--color-light);
 }
 
 .hoverButton.ghost:hover {
@@ -44,7 +45,48 @@
   transform: translateY(-100%);
 }
 
-  
+/* Variant 3: Black */
+.hoverButton.black {
+  background-color: var(--color-primary);
+  border: 0.50px solid var(--transparent-1);
+  color: var(--color-light);
+}
+
+.hoverButton.black:hover .textUp {
+  transform: translateY(-100%);
+}
+
+.hoverButton.black:hover .textDown {
+  transform: translateY(-100%);
+}
+
+/* Variant 4: arrow */
+.hoverButton.arrow {
+  background-color: transparent;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hoverButton.arrow .hoverButtonContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hoverButton.arrow .icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hoverButton.arrow:hover .icon {
+  transform: rotate(45deg);
+}
+
+
+
+
+
 .hoverButtonContent {
     display: flex;
     align-items: center;
@@ -59,7 +101,7 @@
 .hoverButtonTitle .textUp,
 .hoverButtonTitle .textDown {
     display: inline-block;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
   
 .hoverButtonTitle .textUp {

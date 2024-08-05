@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import { FiArrowUpRight } from 'react-icons/fi';
 import './hoverButton.css';
 
 function HoverButton({ title, link, icon, variant }) {
   return (
     <Link to={link} className={`hoverButton ${variant}`}>
       <div className="hoverButtonContent">
+      {variant === 'arrow' && <FiArrowUpRight className="icon" />}
         {icon}
         <div className="hoverButtonTitle">
           <span className="textUp">{title}</span>
