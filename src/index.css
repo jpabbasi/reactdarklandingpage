@@ -17,6 +17,7 @@
   --color-light-grey: #e6e6e6;
   --transparent-1: rgba(255, 255, 255, 0.1);
   --transparent-2: rgba(255, 255, 255, 0.2);
+  --transparent-3: #1a1a1a30;
   --border-radius: 8px;
 }
 
