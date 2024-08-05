@@ -10,33 +10,11 @@
 .whiteBoard h1 {
   line-height: 3.5rem;
   font-weight: normal;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .whiteBoard h3 {
   line-height: 1.5rem;
-}
-
-.cardTitle {
-  display: flex;
-  flex: row;
-  align-items: center;
-}
-
-.servicesText {
-  gap: 0.5rem;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  padding-top: 3rem;
-}
-
-.servicesFlex {
-  align-items: stretch; 
-  gap: 2rem;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
 }
 
 /* Small Devices */
