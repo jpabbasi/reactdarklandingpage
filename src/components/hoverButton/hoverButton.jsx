@@ -6,13 +6,16 @@ function HoverButton({ title, link, icon, variant }) {
   return (
     <Link to={link} className={`hoverButton ${variant}`}>
       <div className="hoverButtonContent">
-      {variant === 'arrow' && <FiArrowUpRight className="icon" />}
+      {(variant === 'arrow' || variant === 'arrow-white') && <FiArrowUpRight className="icon" />}
         {icon}
+        { title && (
         <div className="hoverButtonTitle">
           <span className="textUp">{title}</span>
           <span className="textDown">{title}</span>
         </div>
-      </div>
+    )
+  }
+  </div>
     </Link>
   );
 }
