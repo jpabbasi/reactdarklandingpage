@@ -12,8 +12,18 @@
     flex-direction: row;
 }
 
-/* .cardIcon {
-    font-size: 2rem;
-    padding-top: 12px;
-    color: var(--color-grey-2)
-} */
+.card.ghost {
+    position: absolute;
+    background: var(--transparent-1);
+    border: 1px solid var(--transparent-2);
+    backdrop-filter: blur(10px);
+}
+
+.card.ghost h1 {
+    color: var(--color-light);
+}
+
+.card.ghost p {
+    font-size: 1.1rem;
+    color: var(--color-light);
+}
