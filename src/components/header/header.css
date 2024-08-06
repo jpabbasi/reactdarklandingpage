@@ -1,78 +1,91 @@
 .headerMain {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px);
-    position: fixed;
-    width: 100%;
-    background-color: transparent;
-    padding: 1rem 32rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000; /* Ensures it stays on top */
-  }
+  backdrop-filter: blur(20px);
+  position: fixed;
+  width: 100%;
+  padding: 1rem 40rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.mobileMenuContainer {
+  display: none;
+}
 
 .headerMain.dark .headerLogo h1,
-.headerMain.dark .navLinks a {
+.headerMain.dark .navLinks a,
+.headerMain.dark .mobileMenuButton .hoverButton,
+.headerMain.dark .mobileContactButton .hoverButton {
   color: var(--color-primary);
 }
 
 .headerLogo {
-   color: var(--color-light);
-    font-size: 0.7rem;
-  }
-  
+  color: var(--color-light);
+  font-size: 0.7rem;
+}
+
 .headerContent {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .navLinks a {
-    margin-left: 2rem;
-    color: var(--color-light);
-  }
+  margin-left: 2rem;
+  color: var(--color-light);
+}
 
 .navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.mobileMenuButton, .mobileContactButton {
+  display: none;
+}
+
+/* Responsive adjustments */
+
+/* Small and Medium Devices */
+@media (max-width: 1024px) {
+  .headerMain {
+    padding: 1.5rem 5rem;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .headerLogo {
+    flex: 1;
+  }
+
+  .mobileMenuButton, .mobileContactButton {
+    display: block;
+  }
+
+  .mobileMenuContainer {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
   }
 
-  /* Responsive adjustments */
+}
 
-  /* Small Devices */
-  @media (max-width: 800px) {
-    .navLinks {
-      display: none;
-    }
-  }
-  
-  /* Medium Devices */
-  @media (min-width: 481px) and (max-width: 1024px) {
-    .headerMain {
-    padding: 2rem 5rem;
-    }
-
-    .navLinks {
-      gap: 0.5rem;
-      }
-
-    .navTitle {
-      font-size: 0.9rem;
-    }
-  }
-
-  /* Normal Devices */
-  @media (min-width: 1024px) and (max-width: 2000px) {
-    .headerMain {
+/* Normal Devices */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .headerMain {
     padding: 2rem 16rem;
-    }
-  
+  }
 
-    .navLinks {
-      gap: 0.5rem;
-      }
+  .navLinks {
+    gap: 0.5rem;
+  }
 
-    .navTitle {
-      font-size: 0.9rem;
-    } }
+  .navTitle {
+    font-size: 0.9rem;
+  }
+}
+
