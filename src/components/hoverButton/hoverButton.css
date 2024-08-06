@@ -1,5 +1,6 @@
 .hoverButton {
-  font-size: 0.9rem;
+  justify-content: center;
+  font-size: 1rem;
   text-decoration: none;
   color: var(--color-light);
   display: inline-flex;
@@ -10,26 +11,18 @@
   transition: color 0.3s ease-in-out;
   border-radius: var(--border-radius); 
   width: auto;
-  }
+  height: 2.18rem;
+}
 
-  /* Variant 1: Default */
+/* Default Variant */
 .hoverButton.default {
   color: var(--color-light);
 }
 
-.hoverButton.default:hover .textUp {
-  transform: translateY(-100%);
-}
-
-.hoverButton.default:hover .textDown {
-  transform: translateY(-100%);
-}
-
-/* Variant 2: Ghost */
+/* Ghost Variant */
 .hoverButton.ghost {
   background-color: var(--transparent-1);
   border: 0.50px solid var(--transparent-1);
-  color: var(--color-light);
 }
 
 .hoverButton.ghost:hover {
@@ -37,31 +30,15 @@
   border-color: var(--transparent-2);
 }
 
-.hoverButton.ghost:hover .textUp {
-  transform: translateY(-100%);
-}
-
-.hoverButton.ghost:hover .textDown {
-  transform: translateY(-100%);
-}
-
-/* Variant 3: Black */
+/* Black Variant */
 .hoverButton.black {
   background-color: var(--color-primary);
   border: 0.50px solid var(--transparent-1);
-  color: var(--color-light);
 }
 
-.hoverButton.black:hover .textUp {
-  transform: translateY(-100%);
-}
-
-.hoverButton.black:hover .textDown {
-  transform: translateY(-100%);
-}
-
-/* Variant 4: arrow */
+/* Arrow Variant */
 .hoverButton.arrow {
+  font-size: 1.3rem;
   background-color: transparent;
   color: var(--color-primary);
   display: flex;
@@ -69,56 +46,70 @@
   gap: 0.5rem;
 }
 
-.hoverButton.arrow .hoverButtonContent {
+/* Arrow White Variant */
+.hoverButton.arrow-white {
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: var(--color-light);
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.hoverButton.arrow .icon {
+/* Shared Hover Effects for Text Animation */
+.hoverButton:hover .textUp,
+.hoverButton:hover .textDown {
+  transform: translateY(-100%);
+}
+
+/* Text Animation */
+.hoverButtonTitle {
+  position: relative;
+  overflow: hidden;
+}
+
+.hoverButtonTitle .textUp,
+.hoverButtonTitle .textDown {
+  display: inline-block;
   transition: transform 0.3s ease-in-out;
 }
 
-.hoverButton.arrow:hover .icon {
+.hoverButtonTitle .textUp {
+  transform: translateY(0);
+}
+
+.hoverButtonTitle .textDown {
+  position: absolute;
+  left: 0;
+  top: 100%; /* Start below the view */
+  transform: translateY(0);
+}
+
+/* Icon Animation for Arrow Variant */
+.hoverButton.arrow .icon,
+.hoverButton.arrow-white .icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hoverButton.arrow:hover .icon,
+.hoverButton.arrow-white:hover .icon {
   transform: rotate(45deg);
 }
 
+/* Icon Style for Arrow-White Variant */
+.hoverButton.arrow-white .icon {
+  background-color: var(--transparent-1);
+  border: 1px solid var(--transparent-2);
+  color: var(--color-light);
+  border-radius: 50%;
+  padding: 5px; /* Increased padding for larger circle */
+  font-size: 1.5rem;
+}
 
-
-
-
+/* Hover Button Content */
 .hoverButtonContent {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-.hoverButtonTitle {
-    position: relative;
-    overflow: hidden;
-  }
-  
-.hoverButtonTitle .textUp,
-.hoverButtonTitle .textDown {
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-.hoverButtonTitle .textUp {
-    transform: translateY(0);
-  }
-  
-.hoverButtonTitle .textDown {
-    position: absolute;
-    left: 0;
-    top: 100%; /* Start below the view */
-    transform: translateY(0);
-  }
-  
-.hoverButton:hover .textUp {
-    transform: translateY(-100%);
-  }
-  
-.hoverButton:hover .textDown {
-    transform: translateY(-100%);
-  }
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
