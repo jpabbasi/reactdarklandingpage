@@ -43,11 +43,11 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  flex-grow: 1; /* Ensure the container grows to fill the available space */
+  flex-grow: 1;
 }
 
 .servicesCards > * {
-  flex-grow: 1; /* Ensure each card grows to fill the available space */
+  flex-grow: 1;
 }
 
 .servicesTextContainer {
@@ -63,17 +63,16 @@
   }
 
   .servicesText {
-    position: static; /* Disable sticky for mobile */
-    width: 100%; /* Ensure the width is 100% */
-    text-align: center; /* Center-align text for mobile */
+    position: static;
+    width: 100%;
   }
 
   .servicesText.isSticky {
-    position: static; /* Disable sticky for mobile */
+    position: static;
   }
 
   .servicesTextContainer {
-    position: static; /* Ensure container is not positioned */
+    position: static;
   }
 
   .servicesCards {
@@ -84,7 +83,7 @@
 /* Desktop */
 @media (min-width: 1025px) {
   .servicesText {
-    position: -webkit-sticky; /* Apply sticky only for desktop */
+    position: -webkit-sticky;
     position: sticky;
     top: 20px;
   }

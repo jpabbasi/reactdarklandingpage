@@ -30,7 +30,7 @@ const ServicesCards = () => {
             <Sticky topOffset={-5} bottomOffset={-250}>
               {({ style, isSticky }) => {
                 if (!style) {
-                  return null; // Return null if style is not defined
+                  return null;
                 }
                 return (
                   <ServicesText style={{ ...style, top: isSticky ? '20px' : 'auto' }} isSticky={isSticky} />
