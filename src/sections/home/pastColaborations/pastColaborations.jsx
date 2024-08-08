@@ -14,14 +14,17 @@ const PastColaborations = () => {
         />
       </div>
       <div className='imageCardContainer'>
-        {
-        cardsData.map((item, index) => (    
-            <div className="imageCard" style={{ backgroundImage: `url(${item.image})`, zIndex: index }}>
+        {cardsData.map((item, index) => (
+          <div className="imageCard" style={{ backgroundImage: `url(${item.image})`, zIndex: index }} key={index}>
             <Card className="cardRight" variant="ghost">
               <div className='cardFlex'>
                 <h1>{item.title}</h1>
+                <div className='cardFlex mobileVisibility'>
                 <p>{item.desc}</p>
-                <HoverButton variant="arrow-white" title={item.buttonText} link={item.buttonLink}/>
+                <div className='cardButton'>
+                  <HoverButton variant="arrow-white" title={'DISCOVER'} link={item.buttonLink}/>
+                </div>
+                </div>
               </div>
             </Card>
             {item.stacks && (
