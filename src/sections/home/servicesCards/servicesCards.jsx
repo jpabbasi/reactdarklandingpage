@@ -6,7 +6,7 @@ import './servicesCards.css';
 import HoverButton from './../../../components/hoverButton/hoverButton';
 
 const ServicesText = ({ style, isSticky }) => (
-  <div className={`servicesText ${isSticky ? 'isSticky' : ''}`} style={{ ...style }}>
+  <div className={`servicesText ${isSticky ? 'isSticky' : ''}`} style={{ ...style, top: isSticky ? '0' : '5rem'  }}>
     <div>
       <p>SERVICES</p>
       <h1>Design, Development, and Content. All-in-one.</h1>
@@ -33,7 +33,7 @@ const ServicesCards = () => {
                   return null;
                 }
                 return (
-                  <ServicesText style={{ ...style, top: isSticky ? '20px' : 'auto' }} isSticky={isSticky} />
+                  <ServicesText style={{ ...style }} isSticky={isSticky} />
                 );
               }}
             </Sticky>
