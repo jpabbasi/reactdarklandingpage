@@ -8,7 +8,16 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector('.headerMain');
-      const scrollThreshold = window.innerHeight * 0.7;
+
+      // This function is made to check what would be the ideal header color accordingly to the page scroll.
+      // It's different to each screensize.
+
+      let scrollThreshold = 0.7 * window.innerHeight; // Default value (for big devices)
+      if (window.innerWidth <= 600) {
+        scrollThreshold = 0.75 * window.innerHeight; // Small devices
+      } else if (window.innerWidth <= 1024) {
+        scrollThreshold = 1 * window.innerHeight; // Medium devices
+      }
 
       if (window.scrollY > scrollThreshold) {
         header.classList.add('dark');
