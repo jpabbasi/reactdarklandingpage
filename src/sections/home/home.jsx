@@ -1,8 +1,8 @@
 import './home.css'
 import LogoBar from './../../components/logoBar/logoBar';
 import Title from './title/title';
-import ServicesCards from './servicesCards/servicesCards';
-import PastColaborations from './pastColaborations/pastColaborations'
+import Services from './services/services';
+import Works from './works/works'
 
 const Home = () => {
   return (
@@ -10,8 +10,8 @@ const Home = () => {
         {<Title/>}
       <div className='whiteBoard'>
         {<LogoBar/>}
-        {<ServicesCards/>}
-        {<PastColaborations/>}
+        {<Services/>}
+        {<Works/>}
       </div>
     </div>
   )

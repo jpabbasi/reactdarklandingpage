@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { cardsData } from './data';
-import Card from './../../../components/card/Card';
-import './servicesCards.css';
-import HoverButton from './../../../components/hoverButton/hoverButton';
+import Card from '../../../components/card/Card';
+import './services.css';
+import HoverButton from '../../../components/hoverButton/hoverButton';
 
 const ServicesText = ({ style, isSticky }) => (
   <div className={`servicesText ${isSticky ? 'isSticky' : ''}`} style={{ ...style, top: isSticky ? '0' : '5rem'  }}>
@@ -19,7 +19,7 @@ const ServicesText = ({ style, isSticky }) => (
   </div>
 );
 
-const ServicesCards = () => {
+const Services = () => {
   const [isDesktop] = useState(false);
 
   return (
@@ -67,4 +67,4 @@ const ServicesCards = () => {
   );
 };
 
-export default ServicesCards;
+export default Services;

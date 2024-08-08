@@ -1,9 +1,9 @@
-import './pastColaborations.css';
+import './works.css';
 import Card from '../../../components/card/Card';
-import HoverButton from './../../../components/hoverButton/hoverButton';
+import HoverButton from '../../../components/hoverButton/hoverButton';
 import { cardsData } from './data';
 
-const PastColaborations = () => {
+const Works = () => {
   return (
     <div className='selectedWork'>
       <div className='flexTitle'>
@@ -43,4 +43,4 @@ const PastColaborations = () => {
   );
 };
 
-export default PastColaborations;
+export default Works;
