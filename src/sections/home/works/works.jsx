@@ -16,7 +16,7 @@ const Works = () => {
       <div className='imageCardContainer'>
         {cardsData.map((item, index) => (
           <div className="imageCard" style={{ backgroundImage: `url(${item.image})`, zIndex: index }} key={index}>
-            <Card className="cardRight" variant="ghost">
+            <Card className="cardLeft" variant="ghost">
               <div className='cardFlex'>
                 <h1>{item.title}</h1>
                 <div className='cardFlex mobileVisibility'>
@@ -30,7 +30,7 @@ const Works = () => {
             {item.stacks && (
               <div className="stackContainer">
                 {item.stacks.map((stack, index) => (
-                  <Card key={index} className="cardLeft" variant="ghost">
+                  <Card key={index} className="cardRight" variant="ghost">
                     <p>{stack}</p>
                   </Card>
                 ))}

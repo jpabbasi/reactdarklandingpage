@@ -18,12 +18,12 @@
   position: sticky;
   top: 5rem;
   width: 100%;
-  height: 60rem;
+  height: 80vh;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
   overflow: hidden;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .cardFlex {
@@ -32,12 +32,6 @@
   gap: 1rem;
   justify-content: flex-start;
   height: 100%;
-}
-
-.cardRight {
-  position: absolute;
-  bottom: 4rem;
-  left: 4rem;
 }
 
 .stackContainer {
@@ -49,6 +43,12 @@
 }
 
 .cardLeft {
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+}
+
+.cardRight {
   padding: 0.1rem 0.5rem;
 }
 
@@ -62,4 +62,25 @@
   justify-content: flex-start;
   display: none;
  }
+ 
+ .imageCard {
+  max-height: 30rem;
+  padding: 1rem;
+}
+
+.cardLeft {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.stackContainer {
+  display: flex;
+  position: absolute;
+  bottom: 3.5rem;
+  right: 5rem;
+  gap: 4rem;
+}
+
 }
