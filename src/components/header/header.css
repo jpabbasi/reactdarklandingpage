@@ -75,9 +75,9 @@
 }
 
 /* Normal Devices */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) and (max-width: 2000px) {
   .headerMain {
-    padding: 2rem 16rem;
+    padding: 1rem 16rem;
   }
 
   .navLinks {
