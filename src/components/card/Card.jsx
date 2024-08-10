@@ -1,8 +1,8 @@
 import './card.css'
 
-const Card = ({children, className, onClick, variant}) => {
+const Card = ({children, className, onClick, variant, fade}) => {
   return (
-    <div>
+    <div data-aos={fade} >
       <article className={`card ${className} ${variant}`} onClick={onClick}>
         {children}
       </article>

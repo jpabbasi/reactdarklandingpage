@@ -41,9 +41,9 @@ const Services = () => {
             <ServicesText />
           )}
         </div>
-        <div data-aos="fade-up" className='servicesCards'>
+        <div className='servicesCards'>
           {cardsData.map((item, index) => (
-            <Card key={index} className="serviceCard">
+            <Card fade={"fade-up"} key={index} className="serviceCard">
               <div className="cardFlex">
                 <div className="cardText">
                   <div className="cardTitle">

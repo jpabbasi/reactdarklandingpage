@@ -4,7 +4,7 @@ import HoverButton from './../../../components/hoverButton/hoverButton';
 
 const About = () => {
   return (
-    <div className='about'>
+    <div data-aos="fade-up" className='about'>
         <div className='innerAbout'>
             <img src={aboutImage} alt={`portrait`} className="homeImage" />
                 <div className='titleFlex'>

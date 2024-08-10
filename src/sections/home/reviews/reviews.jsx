@@ -12,7 +12,7 @@ const Reviews = () => {
 
       <div className="reviewsGrid">
         {reviewsData && reviewsData.map((review, index) => (
-          <Card key={index} className="reviewCard">
+          <Card fade={"fade-up"} key={index} className="reviewCard">
             <div className="reviewContent">
               <h2>{review.title}</h2>
               <p>{review.description}</p>
