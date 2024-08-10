@@ -8,7 +8,7 @@ const Title = () => {
           <div className="mainTitleText">
             <h1 data-aos="fade-down">Frontend Engineer <br/>& Web Designer</h1>
             <p data-aos="fade-up">
-            Premium web development, design, and SEO <br/>services to help
+            Premium web development, design, and SEO services to help
             your business stand out.
             </p>
           </div>
