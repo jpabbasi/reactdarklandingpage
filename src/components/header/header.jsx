@@ -14,8 +14,8 @@ function Header() {
 
       let scrollThreshold = 0.7 * window.innerHeight; // Default value (for big devices)
       if (window.innerWidth <= 600) {
-        scrollThreshold = 0.75 * window.innerHeight; // Small devices
-      } else if (window.innerWidth <= 1024) {
+        scrollThreshold = 1.36 * window.innerHeight; // Small devices
+      } else if (window.innerWidth <= 2000) {
         scrollThreshold = 1 * window.innerHeight; // Medium devices
       }
 
