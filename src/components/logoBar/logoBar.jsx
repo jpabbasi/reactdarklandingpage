@@ -12,9 +12,8 @@ const LogoBar = () => {
           {[...logos, ...logos].map((logo, index) => (
             <div key={index} className="logoContainer">
               <img
-                src={logo.src}
-                alt={logo.alt}
-                className="logoImage"
+                src={logo}
+                alt={`${logo}'s logo`}
               />
             </div>
           ))}
