@@ -4,6 +4,7 @@ import w from '../../assets/w.webp'
 import am from '../../assets/am.webp'
 import ppl from '../../assets/ppl.webp'
 import mjd from '../../assets/mjd.webp'
+import bl from '../../assets/bl.webp'
 
 export const logos = [
   cs,
@@ -11,5 +12,6 @@ export const logos = [
   w,
   am,
   ppl,
-  mjd
+  mjd,
+  bl
   ];
