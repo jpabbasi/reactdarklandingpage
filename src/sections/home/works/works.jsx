@@ -8,10 +8,12 @@ const Works = () => {
     <div className='selectedWork'>
       <div className='flexTitle'>
         <h1>Selected Work</h1>
+        <div className="titleButton">
         <HoverButton
           title='SEE ALL'
           variant='arrow'
-        />
+          />
+        </div>
       </div>
       <div className='imageCardContainer'>
         {cardsData.map((item, index) => (
