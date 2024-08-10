@@ -47,3 +47,24 @@
   font-size: 1.1rem;
   padding-bottom: 0.1rem;
 }
+
+@media (max-width: 2000px) {
+.titleFlex h1 {
+  line-height: 2.5rem;
+    font-size: 2rem;
+}
+
+.innerAbout img {
+  display: none;
+}
+
+.innerAbout {
+  padding: 3rem;
+}
+
+.titleFlex {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+}
