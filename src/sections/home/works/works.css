@@ -39,22 +39,10 @@
   height: 100%;
 }
 
-.stackContainer {
-  display: flex;
-  position: absolute;
-  bottom: 5rem;
-  right: 7rem;
-  gap: 5rem;
-}
-
 .cardLeft {
   position: absolute;
   bottom: 3.6rem;
   left: 4rem;
-}
-
-.cardRight {
-  padding: 0.1rem 0.5rem;
 }
 
 .cardButton {
@@ -78,14 +66,6 @@
   position: absolute;
   bottom: 1.5rem;
   left: 1.5rem;
-}
-
-.stackContainer {
-  display: flex;
-  position: absolute;
-  bottom: 3.5rem;
-  right: 5rem;
-  gap: 4rem;
 }
 
 }

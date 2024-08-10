@@ -29,15 +29,6 @@ const Works = () => {
                 </div>
               </div>
             </Card>
-            {item.stacks && (
-              <div className="stackContainer">
-                {item.stacks.map((stack, index) => (
-                  <Card key={index} className="cardRight" variant="ghost">
-                    <p>{stack}</p>
-                  </Card>
-                ))}
-              </div>
-            )}
           </div>
         ))}
       </div>
