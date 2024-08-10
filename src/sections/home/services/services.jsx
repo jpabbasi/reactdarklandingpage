@@ -9,7 +9,7 @@ const ServicesText = ({ style, isSticky }) => (
   <div className={`servicesText ${isSticky ? 'isSticky' : ''}`} style={{ ...style, top: isSticky ? '0' : '5rem'  }}>
     <div>
       <p>SERVICES</p>
-      <h1>Design, Development, and Content. All-in-one.</h1>
+      <h1>Design, Development, and Content. <br/> All-in-one.</h1>
       <h3>Take your online presence to the next level with my expert web design and content creation services.</h3>
     </div>
     <HoverButton
