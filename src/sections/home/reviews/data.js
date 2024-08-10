@@ -1,9 +1,9 @@
-import mzr from '../../../assets/mzr.png'
-import mrn from '../../../assets/mrn.jpeg'
-import rznck from '../../../assets/rznck.jpeg'
-import b from '../../../assets/b.jpg'
-import qn from '../../../assets/qn.png'
-import tylr from '../../../assets/tylr.jpeg'
+import mzr from '../../../assets/mzr.webp'
+import mrn from '../../../assets/mrn.webp'
+import rznck from '../../../assets/rznck.webp'
+import b from '../../../assets/b.webp'
+import qn from '../../../assets/qn.webp'
+import tylr from '../../../assets/tylr.webp'
 
 export const reviewsData = [
   
