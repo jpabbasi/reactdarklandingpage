@@ -48,7 +48,7 @@
   padding-bottom: 0.1rem;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 1025px) {
 .titleFlex h1 {
   line-height: 2.5rem;
     font-size: 2rem;
