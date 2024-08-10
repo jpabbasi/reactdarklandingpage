@@ -1,0 +1,49 @@
+.about {
+    padding: 4rem 0rem;
+  }
+
+.innerAbout {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem 6rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border-radius: var(--border-radius);
+}
+
+.innerAbout img {
+    align-self: center;
+    max-width: 23rem;
+    max-height: 30rem; 
+    object-fit: cover;    
+    object-position: top; 
+}
+
+.titleFlex {
+    gap: 1rem;
+    padding-left: 2.1rem;
+    padding-right: 1.8rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutButton {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+.titleFlex h1 {
+    line-height: 4.4rem;
+    font-size: 4rem;
+}
+
+.titleFlex p {
+    font-size: 1.2rem;
+}
+
+.aboutButton .hoverButtonTitle .textUp,
+.aboutButton .hoverButtonTitle .textDown {
+  font-size: 1.1rem;
+  padding-bottom: 0.1rem;
+}
