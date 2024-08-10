@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: flex-start;
   flex: 1;
-  white-space: nowrap; /* Prevents logos from wrapping to the next line */
+  white-space: nowrap;
 }
 
 .logoContainer {
