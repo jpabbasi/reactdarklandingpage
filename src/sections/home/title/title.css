@@ -32,7 +32,6 @@
   height: auto;
   display: block;
   object-fit: cover;
-  background-color: var(--color-primary);
   mix-blend-mode: screen;
   filter: brightness(1.2) contrast(1.2);
 }
