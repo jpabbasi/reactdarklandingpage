@@ -48,11 +48,11 @@
 
 .fadeRight {
   right: 0;
-  background-image: linear-gradient(to left, var(--color-light), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to left, var(--color-light), transparent);
 }
 
 .fadeLeft {
-  background-image: linear-gradient(to right, var(--color-light), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, var(--color-light), transparent);
 }
 
 /* Animation for rotation */
