@@ -9,7 +9,7 @@ function Footer() {
 
       <div className='contact'>
         <p>LET'S TALK</p>
-        <div className='title'>
+        <div className='gradientBackground'>
           <h1>
           Unlock your potential with a <br/>website designed to <b>win</b>.
           </h1>
@@ -31,9 +31,10 @@ function Footer() {
                 to={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                 className="hoverLink"
               >
                 {social.icon}
-                {social.name}
+                <span className="socialName">{social.name}</span>
               </Link>
             ))}
             </div>
@@ -44,7 +45,7 @@ function Footer() {
             <div key={index} className="footerColumn">
               <h4>{column.title}</h4>
               {column.links.map((link, linkIndex) => (
-                <Link key={linkIndex} to={link.url}>
+                <Link key={linkIndex} to={link.url} className="hoverLink">
                   {link.name}
                 </Link>
               ))}
