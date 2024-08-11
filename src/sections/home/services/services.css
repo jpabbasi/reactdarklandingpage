@@ -61,6 +61,10 @@
     align-items: center;
     gap: 2rem;
   }
+  
+  .serviceCard {
+    padding: 2rem;
+  }
 
   .servicesText {
     position: static;
