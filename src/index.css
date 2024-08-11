@@ -58,3 +58,65 @@ body {
 main {
   padding-top: 5rem
 }
+
+.hoverLink {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.hoverLink:before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 1px;
+  bottom: 1px;
+  left: 0;
+  bottom: -1px;
+  z-index: 0;
+  position: absolute;
+  background: var(--color-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.hoverLink:hover {
+  background-position: 0%;
+}
+
+.hoverLink:hover:before {
+  width: 100%;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradientBackground {
+  background: conic-gradient(
+    hsl(60, 100%, 65%),
+    hsl(100, 100%, 55%),
+    hsl(60, 100%, 65%)
+    ) fixed;
+    background-size: 200% 200%;
+    animation: moveGradient 10s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

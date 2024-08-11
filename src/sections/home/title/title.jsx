@@ -5,8 +5,8 @@ import './title.css'
 const Title = () => {
   return (
     <header className='mainTitle'>
-          <div className="mainTitleText">
-            <h1 data-aos="fade-down">Frontend Engineer <br/>& Web Designer</h1>
+          <div>
+            <h1 className="gradientBackground" data-aos="fade-down">Frontend Engineer <br/>& Web Designer</h1>
             <p data-aos="fade-up">
             Premium web development, design, and SEO services to help
             your business stand out.

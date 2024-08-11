@@ -21,49 +21,17 @@ footer {
   margin-top: 1.2rem;
 }
 
-
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .footerSocials a svg {
-  margin-right: 0.5rem; /* Adjust the spacing as needed */
+  margin-right: 0.5rem;
 }
 
-.title {
+.contact h1 {
+  font-size: 6rem;
   line-height: 7rem;
   min-block-size: 25vh;
-  display: flex;
   flex-direction: column;
-  font-weight: bold;
-  background: conic-gradient(
-    hsl(60, 100%, 65%),
-    hsl(100, 100%, 55%),
-    hsl(60, 100%, 65%)
-    ) fixed;
-    background-size: 200% 200%;
-    animation: moveGradient 10s ease infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-  }
-  
-.title h1 {
-  font-size: 6rem;
+  text-align: center;
+  font-weight: normal;
 }
 
 /* footer.css */
@@ -89,9 +57,10 @@ footer {
 }
 
 .footerSocials {
+  align-items: flex-start;
+  gap: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .footerSocials a {
@@ -112,6 +81,8 @@ footer {
 }
 
 .footerColumn {
+  align-items: flex-start;
+  gap: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -146,8 +117,22 @@ footer {
   color: var(--color-grey-2);
 }
 
+
+/* phones */
+@media (max-width: 601px) {
+  .footerMain {
+    font-size: 1.4rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerLeft{
+    align-items: center;
+  }
+}
+
 /* small Devices */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   footer {
     padding: 5rem 2rem;
   }
@@ -156,24 +141,17 @@ footer {
     padding: 0;
   }
 
-  .title {
-  min-block-size: 22vh;
-  }
-
-  .title h1 {
+  .contact h1 {
     line-height: 3rem;
     font-size: 3rem;
   }
-}
-
-/* Small Devices */
-@media (max-width: 1025px) {
+  
   .footerMain {
     padding-top: 6rem;
   }
+}
     
 /* Normal Devices */
-}
 @media (min-width: 1025px) and (max-width: 2000px) {
   footer {
     padding: 5rem 16rem;
