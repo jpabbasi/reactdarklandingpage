@@ -11,7 +11,6 @@
   transition: color 0.3s ease-in-out;
   border-radius: var(--border-radius); 
   width: auto;
-  height: 2.18rem;
 }
 
 /* Default Variant */
@@ -46,9 +45,20 @@
   gap: 0.5rem;
 }
 
+/* Inverted Arrow Variant */
+.hoverButton.arrow-inv {
+  height: 2rem;
+  font-size: 1rem;
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /* Arrow White Variant */
 .hoverButton.arrow-white {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   background-color: transparent;
   color: var(--color-light);
   display: flex;
@@ -87,23 +97,44 @@
 
 /* Icon Animation for Arrow Variant */
 .hoverButton.arrow .icon,
-.hoverButton.arrow-white .icon {
+.hoverButton.arrow-white .icon,
+.hoverButton.arrow-inv .icon {
   transition: transform 0.3s ease-in-out;
 }
 
 .hoverButton.arrow:hover .icon,
-.hoverButton.arrow-white:hover .icon {
+.hoverButton.arrow-white:hover .icon,
+.hoverButton.arrow-inv:hover .icon {
   transform: rotate(45deg);
 }
 
 /* Icon Style for Arrow-White Variant */
-.hoverButton.arrow-white .icon {
+.hoverButton.arrow-white .icon,
+.hoverButton.arrow-up .icon {
   background-color: var(--transparent-1);
   border: 1px solid var(--transparent-2);
   color: var(--color-light);
   border-radius: 50%;
   padding: 5px;
   font-size: 1.5rem;
+}
+
+.hoverButton.arrow-up .icon {
+  background-color: var(--transparent-1);
+  border: 1px solid var(--transparent-2);
+  color: var(--color-light);
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hoverButton.arrow-up:hover .icon {
+  transform: translateY(-4px);
+}
+
+.hoverButton.arrow-up {
+  font-size: 1.1rem;
 }
 
 /* Hover Button Content */
