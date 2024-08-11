@@ -42,12 +42,6 @@
     font-size: 1.2rem;
 }
 
-.aboutButton .hoverButtonTitle .textUp,
-.aboutButton .hoverButtonTitle .textDown {
-  font-size: 1.1rem;
-  padding-bottom: 0.1rem;
-}
-
 @media (max-width: 1025px) {
 .titleFlex h1 {
   line-height: 2.5rem;
