@@ -3,6 +3,7 @@ import './header.css';
 import { buttons, contact } from './data';
 import HoverButton from './../hoverButton/hoverButton';
 import { TbMenu2 } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 function Header() {
   useEffect(() => {
@@ -33,9 +34,16 @@ function Header() {
   return (
     <header className="headerMain">
       <div className="headerContent">
+        <Link to="/" onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }}>
         <div className="headerLogo">
-          <h1>Pedro.</h1>
+          <h1>Pedro <b style={{ fontWeight: 500 }}>Abbasi</b>.</h1>
         </div>
+        </Link>
         <nav className="navLinks">
           {buttons.map((item) => (
             <HoverButton
