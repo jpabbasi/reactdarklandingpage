@@ -2,7 +2,7 @@
   backdrop-filter: blur(20px);
   position: fixed;
   width: 100%;
-  padding: 1rem 35rem;
+  padding: 0.5rem 35rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,12 +17,12 @@
 .headerMain.dark .navLinks a,
 .headerMain.dark .mobileMenuButton .hoverButton,
 .headerMain.dark .mobileContactButton .hoverButton {
-  color: var(--color-primary);
+  color: var(--color-grey);
 }
 
 .headerLogo {
   color: var(--color-light);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .headerContent {
@@ -33,6 +33,7 @@
 }
 
 .navLinks a {
+  font-size: 0.9rem;
   margin-left: 2rem;
   color: var(--color-light);
 }
@@ -51,7 +52,7 @@
 /* Small and Medium Devices */
 @media (max-width: 1024px) {
   .headerMain {
-    padding: 1.5rem 5rem;
+    padding: 0.5rem 2rem;
   }
 
   .navLinks {
