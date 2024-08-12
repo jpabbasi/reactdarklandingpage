@@ -42,7 +42,7 @@ function App() {
         <Route
           path="/services"
           element={
-            <Layout scrollThresholds={{ default: 0.4 * window.innerHeight, medium: 0.6 * window.innerHeight, small: 1.36 * window.innerHeight }}>
+            <Layout scrollThresholds={{ default: 0.4 * window.innerHeight, medium: 0.6 * window.innerHeight, small: 0.5 * window.innerHeight }}>
               <Services />
             </Layout>
           }
