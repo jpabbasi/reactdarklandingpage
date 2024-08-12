@@ -1,0 +1,23 @@
+.pageNotFound {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.pageNotFound h1 {
+    line-height: 4rem;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.pageNotFound div > h2, 
+.pageNotFound div > p {
+    color: var(--color-grey-2);
+    max-width: 20rem;
+}
