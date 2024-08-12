@@ -14,20 +14,21 @@ function HoverButton({ title, link, icon, variant }) {
   };
 
   return (
-    <Link to={link} className={`hoverButton ${variant}`}>
+    <Link to={link} className={`hoverButton ${variant} ${!title ? 'no-title' : ''}`}>
       <div className="hoverButtonContent">
         {renderArrowIcon()}
         {icon}
-        {variant.includes('arrow') ? (
+        {title && variant.includes('arrow') && (
           <span>{title}</span>
-        ) : (
+        )}
+        {title && !variant.includes('arrow') && (
           <div className="hoverButtonTitle">
-          <span className="textUp">{title}</span>
-          <span className="textDown">{title}</span>
-        </div>
+            <span className="textUp">{title}</span>
+            <span className="textDown">{title}</span>
+          </div>
         )
         }
-  </div>
+      </div>
     </Link>
   );
 }
