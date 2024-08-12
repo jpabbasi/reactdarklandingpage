@@ -3,7 +3,7 @@ import HoverButton from './../../components/hoverButton/hoverButton';
 
 function NotFound() {
   return (
-    <div className="pageNotFound">
+    <div className="pageNotFound flexColumn">
       <h1>404</h1>
       <div>
         <h2>Oops! Page not found</h2>
