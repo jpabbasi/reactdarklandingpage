@@ -1,5 +1,5 @@
 import React from 'react'
-import homeImage from '../../../assets/homeImage.avif'
+import homeImage from '../../../assets/portrait.png'
 import './title.css'
 
 const Title = () => {
