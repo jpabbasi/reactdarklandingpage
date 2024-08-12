@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer>
 
-      <div className='contact'>
+      <div className='contact flexColumn'>
         <p>LET'S TALK</p>
         <div className='gradientBackground'>
           <h1>
@@ -19,12 +19,12 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footerMain">
-        <div className="footerLeft">
+      <div className="footerMain flexRow">
+        <div className="footerLeft flexColumn">
           <div className="footerLogo">
           <h3>Pedro <b style={{ fontWeight: 600 }}>Abbasi</b>.</h3>
           </div>
-          <div className="footerSocials">
+          <div className="footerSocials flexColumn">
           {socialLinks.map((social, index) => (
               <Link
                 key={index}
@@ -42,7 +42,7 @@ function Footer() {
 
         <div className="footerRight">
         {footerColumns.map((column, index) => (
-            <div key={index} className="footerColumn">
+            <div key={index} className="footerColumn flexColumn">
               <h4>{column.title}</h4>
               {column.links.map((link, linkIndex) => (
                 <Link key={linkIndex} to={link.url} className="hoverLink">
@@ -54,7 +54,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footerBottom">
+      <div className="footerBottom flexRow">
         <p>🚀 2024 PEDRO ABBASI &copy; All Rights Reserved</p>
         <div onClick={() => {
           window.scrollTo({

@@ -1,13 +1,13 @@
 import './about.css'
-import aboutImage from '../../../assets/aboutImage.avif'
+import aboutImage from '../../../assets/portrait.png'
 import HoverButton from './../../../components/hoverButton/hoverButton';
 
 const About = () => {
   return (
     <div data-aos="fade-up" className='about'>
-        <div className='innerAbout'>
+        <div className='innerAbout flexRow'>
             <img src={aboutImage} alt={`portrait`} className="homeImage" />
-                <div className='titleFlex'>
+                <div className='titleFlex flexColumn'>
                     <h1>Transform your digital presence, elevate your career</h1>
                     <p>Your website is more than just an online presence;
                       it’s the cornerstone of your brand's success.

@@ -7,9 +7,7 @@
 }
 
 .cardFlex {
-    display: flex;
     gap: 1rem;
-    flex-direction: row;
 }
 
 .card.ghost {
@@ -17,10 +15,6 @@
     background: var(--transparent-1);
     border: 1px solid var(--transparent-2);
     backdrop-filter: blur(10px);
-}
-
-.card.ghost h1 {
-    color: var(--color-light);
 }
 
 .card.ghost p {

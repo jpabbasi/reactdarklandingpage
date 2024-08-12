@@ -20,9 +20,10 @@
   color: var(--color-grey);
 }
 
-.headerLogo {
+.headerLogo h1 {
   color: var(--color-light);
-  font-size: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 1rem;
 }
 
 .headerContent {
@@ -35,7 +36,6 @@
 .navLinks a {
   font-size: 0.9rem;
   margin-left: 2rem;
-  color: var(--color-light);
 }
 
 .navLinks {

@@ -4,7 +4,7 @@ import Card from '../../../components/card/Card';
 
 const Reviews = () => {
   return (
-    <div className="reviewsContainer">
+    <div className="reviewsContainer blackTitle">
       <h1>Professional Recommendations</h1>
       <p>Discover how industry leaders and professionals
         have benefited from my expertise and dedication.
@@ -12,7 +12,7 @@ const Reviews = () => {
 
       <div className="reviewsGrid">
         {reviewsData && reviewsData.map((review, index) => (
-          <Card fade={"fade-up"} key={index} className="reviewCard">
+          <Card fade={"fade-up"} key={index} className="reviewCard flexColumn">
             <div className="reviewContent">
               <h2>{review.title}</h2>
               <p>{review.description}</p>

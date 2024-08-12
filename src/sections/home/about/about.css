@@ -3,11 +3,8 @@
   }
 
 .innerAbout {
-    display: flex;
-    flex-direction: row;
     padding: 5rem 6rem;
     background-color: var(--color-primary);
-    color: var(--color-light);
     border-radius: var(--border-radius);
 }
 
@@ -24,8 +21,6 @@
     padding-left: 2.1rem;
     padding-right: 1.8rem;
     align-self: center;
-    display: flex;
-    flex-direction: column;
 }
 
 .aboutButton {
