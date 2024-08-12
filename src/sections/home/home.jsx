@@ -2,7 +2,7 @@ import './home.css'
 import LogoBar from './../../components/logoBar/logoBar';
 import Title from './title/title';
 import Services from './services/services';
-import Works from './works/works'
+import SelectedWork from './selectedWork/selectedWork';
 import Reviews from './reviews/reviews';
 import About from './about/about';
 
@@ -13,7 +13,7 @@ const Home = () => {
       <div className='whiteBoard'>
         {<LogoBar/>}
         {<Services/>}
-        {<Works/>}
+        {<SelectedWork/>}
         {<Reviews/>}
         {<About/>}
       </div>

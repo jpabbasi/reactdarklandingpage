@@ -2,18 +2,6 @@
   padding-top: 3rem;
 }
 
-.flexTitle {
-  padding-bottom: 1.5rem;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.titleButton {
-  padding-top: 0.5rem;
-}
-
 .imageCardContainer {
   position: relative;
 }
@@ -32,8 +20,6 @@
 }
 
 .cardFlex {
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
   justify-content: flex-start;
   height: 100%;

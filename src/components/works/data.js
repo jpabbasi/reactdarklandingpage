@@ -1,6 +1,6 @@
-import backgroundImage1 from '../../../assets/backgroundImage1.jpg'
-import backgroundImage2 from '../../../assets/backgroundImage2.jpg'
-import backgroundImage3 from '../../../assets/backgroundImage3.jpg'
+import backgroundImage1 from '../../assets/backgroundImage1.jpg'
+import backgroundImage2 from '../../assets/backgroundImage2.jpg'
+import backgroundImage3 from '../../assets/backgroundImage3.jpg'
 
 export const cardsData = [
     {

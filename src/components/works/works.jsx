@@ -1,25 +1,16 @@
 import './works.css';
-import Card from '../../../components/card/Card';
-import HoverButton from '../../../components/hoverButton/hoverButton';
+import Card from '../../components/card/Card';
+import HoverButton from '../../components/hoverButton/hoverButton';
 import { cardsData } from './data';
 
 const Works = () => {
   return (
     <div className='selectedWork'>
-      <div className='flexTitle'>
-        <h1>Selected Work</h1>
-        <div className="titleButton">
-        <HoverButton
-          title='SEE ALL'
-          variant='arrow'
-          />
-        </div>
-      </div>
       <div className='imageCardContainer'>
         {cardsData.map((item, index) => (
           <div className="imageCard" style={{ backgroundImage: `url(${item.image})`, zIndex: index }} key={index}>
             <Card className="cardLeft" variant="ghost">
-              <div className='cardFlex'>
+              <div className='flexColumn cardFlex'>
                 <h1>{item.title}</h1>
                 <div className='cardFlex mobileVisibility'>
                 <p>{item.desc}</p>
