@@ -5,19 +5,16 @@ import HoverButton from './../hoverButton/hoverButton';
 import { TbMenu2 } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ scrollThresholds }) {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector('.headerMain');
 
-      // This function is made to check what would be the ideal header color accordingly to the page scroll.
-      // It's different to each screensize.
-
-      let scrollThreshold = 0.7 * window.innerHeight; // Default value (for big devices)
-      if (window.innerWidth <= 600) {
-        scrollThreshold = 1.36 * window.innerHeight; // Small devices
+      let scrollThreshold = scrollThresholds.default;
+      if (window.innerWidth <= 1025) {
+        scrollThreshold = scrollThresholds.small;
       } else if (window.innerWidth <= 2000) {
-        scrollThreshold = 1 * window.innerHeight; // Medium devices
+        scrollThreshold = scrollThresholds.medium;
       }
 
       if (window.scrollY > scrollThreshold) {
@@ -29,7 +26,7 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [scrollThresholds]);
 
   return (
     <header className="headerMain">
