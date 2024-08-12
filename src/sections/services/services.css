@@ -67,6 +67,10 @@
 
 /* Small Devices */
 @media (max-width: 600px) {
+    .servicesHeader {
+        padding-top: 2rem;
+    }
+
     .analyticsItem {
     flex: 1 1 45%;
     }
