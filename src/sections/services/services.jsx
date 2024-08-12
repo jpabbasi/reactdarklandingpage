@@ -15,8 +15,8 @@ const Services = () => {
     <div className='whiteBoard'>
       <div className="analytics flexRow">
         {
-          analyticsData.map((item) => (
-            <div>
+          analyticsData.map((item, index) => (
+            <div key={index} className="analyticsItem">
               <h3>{item.title}</h3>
               <h2>{item.number}</h2>
             </div>
@@ -26,7 +26,7 @@ const Services = () => {
       <div className='servicesList'>
         {servicesData.map((service) => (
           <div className='servicesListFlex'>
-            <div>
+            <div className='mainServiceTitle'>
               <h2>{service.title}</h2>
               <h3>{service.subTitle}</h3>
               <HoverButton variant="arrow-black" title="GET IN TOUCH"/>
