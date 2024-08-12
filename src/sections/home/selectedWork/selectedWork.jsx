@@ -4,12 +4,12 @@ import './selectedWork.css'
 
 const SelectedWork = () => {
   return (
-    <div>
+    <div className='selectedWork'>
         <div className='flexRow blackTitle'>
         <h1>Selected Work</h1>
         <HoverButton
           title='SEE ALL'
-          variant='arrow'
+          variant='arrow-black'
         />
       </div>
       <Works/>
