@@ -23,7 +23,6 @@
     max-width: 90rem;
 }
 .analytics {
-    padding: 0 1rem;
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
@@ -71,9 +70,14 @@
     .analyticsItem {
     flex: 1 1 45%;
     }
+
+    .servicesList {
+      padding: 2rem 0;
+  }
   }
 
-  @media (max-width: 1025px) {
+
+@media (max-width: 1025px) {
     .servicesHeader h1 {
         line-height: 3rem;
         font-size: 3rem;
