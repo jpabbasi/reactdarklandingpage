@@ -7,6 +7,7 @@
 }
 
 .cardFlex {
+    text-align: start;
     gap: 1rem;
 }
 

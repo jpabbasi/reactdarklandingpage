@@ -14,6 +14,7 @@
 }
 
 .servicesHeader p {
+    width: 50rem;
     color: var(--color-grey-2);
     font-size: 1.5rem;
 }
@@ -26,6 +27,10 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
+}
+
+.analytics h3 {
+    color: var(--color-primary);
 }
 
 .analyticsItem {
@@ -42,7 +47,6 @@
 
 .servicesList h3 {
     width: 20rem;
-    padding-bottom: 1rem;
 }
 
 .servicesListFlex {
@@ -63,6 +67,10 @@
     border-bottom: 1px solid var(--color-light-grey);
     margin-bottom: 5rem;
     padding-bottom: 5rem;
+}
+
+.mainServiceTitle {
+    gap: 1rem;
 }
 
 /* Small Devices */

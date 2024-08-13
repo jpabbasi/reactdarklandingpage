@@ -26,10 +26,12 @@ const Services = () => {
       <div className='servicesList'>
         {servicesData.map((service) => (
           <div className='servicesListFlex'>
-            <div className='mainServiceTitle'>
+            <div className='flexColumn mainServiceTitle '>
               <h2>{service.title}</h2>
               <h3>{service.subTitle}</h3>
-              <HoverButton variant="arrow-black" title="GET IN TOUCH"/>
+              <div className='flexRow'>
+              <HoverButton title={<h3>GET IN TOUCH</h3>} variant="arrow-black"/>
+              </div>
             </div>
             <div>
               {service.description}
