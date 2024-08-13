@@ -86,16 +86,26 @@
     .servicesList {
       padding: 2rem 0;
   }
-  }
+  .servicesHeader h1 {
+    line-height: 3rem;
+    font-size: 3rem;
+}
+
+.servicesHeader p {
+    width: 15rem;
+    font-size: 1rem;
+}
+  }  
 
 
-@media (max-width: 1025px) {
+@media (min-width: 601px) and (max-width: 1025px) {
     .servicesHeader h1 {
         line-height: 3rem;
         font-size: 3rem;
     }
 
     .servicesHeader p {
+        width: 30rem;
         font-size: 1rem;
     }
 
