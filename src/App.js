@@ -5,6 +5,8 @@ import Footer from './components/footer/footer';
 import NotFound from './sections/notFound/notFound';
 import Services from './sections/services/services';
 import Work from './sections/work/work';
+import About from './sections/about/about'
+import WorkDetails from './sections/workDetails/workDetails';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -50,8 +52,24 @@ function App() {
         <Route
           path="/work"
           element={
-            <Layout scrollThresholds={{ default: 0.7 * window.innerHeight, medium: 1 * window.innerHeight, small: 1.36 * window.innerHeight }}>
+            <Layout scrollThresholds={{ default: 99 * window.innerHeight, medium: 99 * window.innerHeight, small: 99 * window.innerHeight }}>
               <Work />
+            </Layout>
+          }
+        />
+        <Route
+          path="/work/:id"
+          element={
+            <Layout scrollThresholds={{ default: 99 * window.innerHeight, medium: 99 * window.innerHeight, small: 99 * window.innerHeight }}>
+              <WorkDetails />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout scrollThresholds={{ default: 99 * window.innerHeight, medium: 99 * window.innerHeight, small: 99 * window.innerHeight }}>
+              <About />
             </Layout>
           }
         />
