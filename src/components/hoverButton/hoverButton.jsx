@@ -1,33 +1,40 @@
 import { Link } from 'react-router-dom';
-import { FiArrowUpRight } from 'react-icons/fi';
-import { FiArrowUp } from "react-icons/fi";
+import { FiArrowUpRight, FiArrowUp } from 'react-icons/fi';
 import './hoverButton.css';
 
-function HoverButton({ title, link, icon, variant }) {
-  const renderArrowIcon = () => {
-    if (variant === 'arrow-up') {
+function HoverButton({ title, link, icon, variant = 'default', onClick }) {
+  const renderIcon = () => {
+    if (variant.includes('arrow-up')) {
       return <FiArrowUp className="icon" />;
     } else if (variant.includes('arrow')) {
       return <FiArrowUpRight className="icon" />;
     }
-    return null;
+    return icon;
   };
 
-  return (
-    <Link to={link} className={`hoverButton ${variant} ${!title ? 'no-title' : ''}`}>
-      <div className="hoverButtonContent">
-        {renderArrowIcon()}
-        {icon}
-        {title && variant.includes('arrow') && (
+  const renderText = () => {
+    if (variant.includes('arrow')) {
+      return (
+        <div className="hoverButtonTitle">
           <span>{title}</span>
-        )}
-        {title && !variant.includes('arrow') && (
-          <div className="hoverButtonTitle">
-            <span className="textUp">{title}</span>
-            <span className="textDown">{title}</span>
-          </div>
-        )
-        }
+        </div>
+      );
+    } else {
+      return (
+        <div className="hoverButtonTitle">
+          <span className="textUp">{title}</span>
+          <span className="textDown">{title}</span>
+        </div>
+      );
+    }
+  };
+  
+
+  return (
+    <Link to={link} onClick={onClick} className={`hoverButton ${variant} ${!title ? 'no-title' : ''}`}>
+      <div className="hoverButtonContent">
+        {renderIcon()}
+        {renderText()}
       </div>
     </Link>
   );
