@@ -1,18 +1,18 @@
 export const analyticsData = [
     {
-        title: 'PROJECTS',
+        title: 'PROJECTS DELIVERED',
         number: '+150'
     },
     {
-        title: 'HAPPY CLIENTS',
-        number: '100%'
+        title: 'SUCCESSFUL REBRANDS',
+        number: '4'
     },
     {
-        title: 'CLIENTS REACHED',
-        number: '+1M'
+        title: 'GLOBAL IMPACTS',
+        number: '+1.5M USERS'
     },
     {
-        title: 'GROWTH',
+        title: 'BUSINESS GROWTH',
         number: '+$500M'
     }
 ]
