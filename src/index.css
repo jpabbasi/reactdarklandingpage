@@ -142,3 +142,9 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
