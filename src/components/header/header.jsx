@@ -1,16 +1,31 @@
-import { useEffect } from 'react';
-import './header.css';
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { TbMenu2, TbX } from 'react-icons/tb';
 import { buttons, contact } from './data';
 import HoverButton from './../hoverButton/hoverButton';
-import { TbMenu2 } from "react-icons/tb";
-import { Link } from 'react-router-dom';
+import './header.css';
 
 function Header({ scrollThresholds }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const menuButtonRef = useRef(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target) && 
+        menuButtonRef.current && !menuButtonRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector('.headerMain');
-
       let scrollThreshold = scrollThresholds.default;
+
       if (window.innerWidth <= 1025) {
         scrollThreshold = scrollThresholds.small;
       } else if (window.innerWidth <= 2000) {
@@ -25,58 +40,79 @@ function Header({ scrollThresholds }) {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, [scrollThresholds]);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="headerMain">
-      <div className="headerContent">
-        <Link to="/" onClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        }}>
-        <div className="headerLogo">
-          <h1>Pedro <b style={{ fontWeight: 500 }}>Abbasi</b>.</h1>
-        </div>
-        </Link>
-        <nav className="navLinks">
-          {buttons.map((item) => (
-            <HoverButton
-              key={item.id}
-              title={item.title}
-              link={item.link}
-              icon={item.icon}
-              variant="default"
-            />
-          ))}
-          <HoverButton
-            title={contact.title}
-            link={contact.link}
-            icon={contact.icon}
-            variant="ghost"
-          />
-        </nav>
-        <div className="mobileMenuContainer">
-          <div className="mobileContactButton">
+    <div className="headerContainer">
+      <header className="headerMain">
+        <div className="headerContent">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <div className="headerLogo">
+              <h1>Pedro <b style={{ fontWeight: 500 }}>Abbasi</b>.</h1>
+            </div>
+          </Link>
+          <nav className="navLinks">
+            {buttons.map((item) => (
+              <HoverButton
+                key={item.id}
+                title={item.title}
+                link={item.link}
+                icon={item.icon}
+                variant="default"
+              />
+            ))}
             <HoverButton
               title={contact.title}
               link={contact.link}
               icon={contact.icon}
               variant="ghost"
             />
-          </div>
-          <div className="mobileMenuButton">
-            <HoverButton
-              link="#"
-              icon={<TbMenu2 />}
-              variant="ghost"
-            />
+          </nav>
+          <div className="mobileMenuContainer">
+            <div className="mobileContactButton">
+              <HoverButton
+                title={contact.title}
+                link={contact.link}
+                icon={contact.icon}
+                variant="ghost"
+              />
+            </div>
+            <div className={`mobileMenuButton ${isMenuOpen ? 'open' : ''}`} 
+                 onClick={toggleMenu} 
+                 ref={menuButtonRef}>
+              <TbMenu2 className="icon menu" />
+              <TbX className="icon x" />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      {isMenuOpen && (     
+        <div className="mobileMenu" ref={menuRef}>
+          {buttons.map((item) => (
+          <div
+          className="mobileMenuItem">
+            <HoverButton
+              key={item.id}
+              link={item.link}
+              onClick={handleLinkClick}
+              icon={item.icon}
+              title={item.title}
+              variant='black-ghost'
+            />
+          </div>))}
+        </div>
+      )}
+    </div>
   );
 }
 

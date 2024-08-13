@@ -1,8 +1,13 @@
+.headerContainer {
+  position: relative;
+  z-index: 1000;
+}
+
 .headerMain {
   backdrop-filter: blur(20px);
   position: fixed;
   width: 100%;
-  padding: 0.5rem 35rem;
+  padding: 0.3rem 35rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +21,8 @@
 .headerMain.dark .headerLogo h1,
 .headerMain.dark .navLinks a,
 .headerMain.dark .mobileMenuButton .hoverButton,
-.headerMain.dark .mobileContactButton .hoverButton {
+.headerMain.dark .mobileContactButton .hoverButton,
+.headerMain.dark .mobileMenuButton .icon {
   color: var(--color-grey);
 }
 
@@ -47,12 +53,52 @@
   display: none;
 }
 
-/* Responsive adjustments */
+.mobileMenuButton .icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
 
-/* Small and Medium Devices */
+.mobileMenu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  padding: 1.4rem;
+  gap: 2rem;
+  backdrop-filter: blur(20px);
+  background-color: var(--transparent-3);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 9999;
+  border-radius: 10px;
+}
+
+.mobileMenuItem {
+  color: var(--color-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobileMenuItem:hover {
+  color: var(--color-accent);
+}
+
+.mobileMenu .mobileMenuItem .hoverButton {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .headerMain {
-    padding: 0.5rem 2rem;
+    padding: 0.3rem 2rem;
   }
 
   .navLinks {
@@ -63,30 +109,56 @@
     flex: 1;
   }
 
-  .mobileMenuButton, .mobileContactButton {
+  .mobileContactButton {
     display: block;
   }
+
+  .mobileMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+  
+  .mobileMenuButton .icon {
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .mobileMenuButton .icon.menu {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .mobileMenuButton .icon.x {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  
+  .mobileMenuButton.open .icon.menu {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+  .mobileMenuButton.open .icon.x {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
 
   .mobileMenuContainer {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
-
 }
 
-/* Normal Devices */
-@media (min-width: 1025px) and (max-width: 2000px) {
-  .headerMain {
-    padding: 1rem 16rem;
+  /* Normal Devices */
+  @media (min-width: 1025px) and (max-width: 2000px) {
+    .headerMain {
+      padding: 0.3rem 16rem;
+    }
   }
-
-  .navLinks {
-    gap: 0.5rem;
-  }
-
-  .navTitle {
-    font-size: 0.9rem;
-  }
-}
-
