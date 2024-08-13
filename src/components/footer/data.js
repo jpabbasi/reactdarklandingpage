@@ -12,7 +12,7 @@ export const footerColumns = [
     {
       title: 'PAGES',
       links: [
-        { name: 'Home', url: '/home' },
+        { name: 'Home', url: '/' },
         { name: 'Services', url: '/services' },
         { name: 'About', url: '/about' },
         { name: 'Contact', url: '/contact' },
