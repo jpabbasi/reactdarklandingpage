@@ -74,31 +74,10 @@
 }
 
 /* Small Devices */
-@media (max-width: 600px) {
-    .servicesHeader {
-        padding-top: 2rem;
-    }
-
+@media (max-width: 1025px) {
     .analyticsItem {
     flex: 1 1 45%;
     }
-
-    .servicesList {
-      padding: 2rem 0;
-  }
-  .servicesHeader h1 {
-    line-height: 3rem;
-    font-size: 3rem;
-}
-
-.servicesHeader p {
-    width: 15rem;
-    font-size: 1rem;
-}
-  }  
-
-
-@media (min-width: 601px) and (max-width: 1025px) {
     .servicesHeader h1 {
         line-height: 3rem;
         font-size: 3rem;
@@ -109,10 +88,6 @@
         font-size: 1rem;
     }
 
-    .servicesListFlex {
-        flex-direction: column;
-    }
-
     .mainServiceTitle {
         padding-bottom: 3rem;
     }
@@ -120,8 +95,12 @@
     .servicesList h3 {
         width: 100%;
     }
+
+    .servicesListFlex {
+        flex-direction: column;
+    }
     
     .servicesListFlex p {
         width: 100%;
     }
-  }
+  }  
