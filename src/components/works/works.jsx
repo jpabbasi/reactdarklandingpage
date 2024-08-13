@@ -1,26 +1,25 @@
 import './works.css';
 import Card from '../../components/card/Card';
-import HoverButton from '../../components/hoverButton/hoverButton';
-import { cardsData } from './data';
+import { cardsData } from '../../sections/workDetails/data';
+import { Link } from 'react-router-dom';
 
 const Works = () => {
   return (
     <div className='selectedWork'>
       <div className='imageCardContainer'>
-        {cardsData.map((item, index) => (
-          <div className="imageCard" style={{ backgroundImage: `url(${item.image})`, zIndex: index }} key={index}>
-            <Card className="cardLeft" variant="ghost">
-              <div className='flexColumn cardFlex'>
-                <h1>{item.title}</h1>
-                <div className='cardFlex mobileVisibility'>
-                <p>{item.desc}</p>
-                <div className='cardButton'>
-                  <HoverButton variant="arrow-white" title={'DISCOVER'} link={item.buttonLink}/>
+        {cardsData.map((item) => (
+          <Link to={`/work/${item.id}`} key={item.id}>
+            <div className="imageCard" style={{ backgroundImage: `url(${item.image})`, zIndex: item.id }}>
+              <Card className="cardLeft" variant="ghost">
+                <div className='cardFlex'>
+                  <h1>{item.title}</h1>
+                  <div className='cardFlex mobileVisibility'>
+                    <p>{item.preview}</p>
+                  </div>
                 </div>
-                </div>
-              </div>
-            </Card>
-          </div>
+              </Card>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
