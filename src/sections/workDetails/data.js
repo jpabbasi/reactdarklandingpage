@@ -30,7 +30,28 @@ export const cardsData = [
           title: `COMPANY WEBSITE`,
           content: <a href="https://www.zenvia.com">ZENVIA.COM</a>
         },
+      ],
+      details: [
+        {
+          subtitle: 'WORK AND TEAM',
+          title: 'Developed smart and cheap solutions',
+          text: `Acted maasdokasdoaskdksadsadsdasdas`
+        },
+        {
+          subtitle: 'WORK AND TEAM',
+          title: 'Developed smart and cheap solutions',
+          text: `Acted maasdokasdoaskdksadsadsdasdas`
+        },
+      ],
+      cards: [
+        {
+          subtitle: 'CHALLENGE',
+          title: 'Outdated website design was hurting user engagement',
+          desc: `The client's outdated website design was turning away potential customers
+                and reducing user engagement, leading to lower sales and brand image. They
+                needed a fresh, modern design to revamp their online presence and attract more visitors.`
+        }
       ]
-    }
+    },
   ];
   
