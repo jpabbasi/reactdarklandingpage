@@ -91,6 +91,47 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
+.whiteBoard {
+  padding: 3rem 35rem;
+  background-color: var(--color-light)
+}
+
+.whiteBoard p {
+  color: var(--color-grey);
+}
+
+.whiteBoard h1 {
+  line-height: 3.5rem;
+  font-weight: normal;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.whiteBoard h3 {
+  line-height: 1.5rem;
+}
+
+/* Small Devices */
+@media (max-width: 600px) {
+  .whiteBoard {
+    padding: 2rem;
+  }
+}
+
+/* Medium Devices */
+@media (max-width: 1024px) {
+  .whiteBoard {
+    padding: 5rem 2rem;
+  }
+}
+
+/* Normal Devices */
+@media (min-width: 1025px) and (max-width: 2000px) {
+  .whiteBoard {
+    padding: 5rem 16rem;
+  }
+}
+
 .hoverLink:before {
   display: block;
   content: '';
