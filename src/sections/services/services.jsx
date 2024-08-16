@@ -2,11 +2,12 @@ import servicesHeader from '../../assets/servicesHeader.png'
 import './services.css'
 import { analyticsData, servicesData } from './data'
 import HoverButton from './../../components/hoverButton/hoverButton';
+import BasicHeader from '../../components/basicHeader/basicHeader';
 
 const Services = () => {
   return (
     <div>
-    <div className='servicesHeader flexColumn'>
+    <div className='defaultHeader flexColumn'>
       <h3 className="gradientBackground">SERVICES</h3>
       <h1>Unlock Your <br/> Website's Potential</h1>
       <p>Maximize your website's capabilities and reach its<br/>full potential with our services.</p>
@@ -26,13 +27,13 @@ const Services = () => {
       <div className='servicesList'>
         {servicesData.map((service) => (
           <div className='servicesListFlex'>
-            <div className='flexColumn mainServiceTitle '>
+            <BasicHeader>
               <h2>{service.title}</h2>
               <h3>{service.subTitle}</h3>
-              <div className='flexRow'>
-              <HoverButton title={<h3>GET IN TOUCH</h3>} variant="arrow-black"/>
+              <div style={{paddingTop: '1rem'}}>
+              <HoverButton link={'/contact'} title={<h3>GET IN TOUCH</h3>} variant="arrow-black"/>
               </div>
-            </div>
+            </BasicHeader>
             <div>
               {service.description}
           </div>

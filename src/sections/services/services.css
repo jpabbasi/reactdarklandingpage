@@ -1,28 +1,3 @@
-.servicesHeader {
-    text-align: center;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 5rem;
-}
-
-.servicesHeader h1 {
-    font-weight: normal;
-}
-
-.servicesHeader h3 {
-    font-weight: normal;
-}
-
-.servicesHeader p {
-    width: 60rem;
-    color: var(--color-grey-2);
-    font-size: 1.5rem;
-}
-
-.servicesHeader img {
-    width: 100%;
-    max-width: 90rem;
-}
 .analytics {
     flex-wrap: wrap;
     text-align: center;
@@ -64,32 +39,15 @@
 }
 
 .servicesListFlex:not(:last-child) {
-    border-bottom: 1px solid var(--color-light-grey);
+    border-bottom: 1px dashed var(--color-light-grey);
     margin-bottom: 5rem;
     padding-bottom: 5rem;
-}
-
-.mainServiceTitle {
-    gap: 1rem;
 }
 
 /* Small Devices */
 @media (max-width: 1025px) {
     .analyticsItem {
     flex: 1 1 45%;
-    }
-    .servicesHeader h1 {
-        line-height: 3rem;
-        font-size: 3rem;
-    }
-
-    .servicesHeader p {
-        width: 30rem;
-        font-size: 1rem;
-    }
-
-    .mainServiceTitle {
-        padding-bottom: 3rem;
     }
 
     .servicesList h3 {

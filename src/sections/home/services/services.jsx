@@ -4,42 +4,29 @@ import { cardsData } from './data';
 import Card from '../../../components/card/Card';
 import './services.css';
 import HoverButton from '../../../components/hoverButton/hoverButton';
-
-const ServicesText = ({ style, isSticky }) => (
-  <div className={`servicesText flexColumn ${isSticky ? 'isSticky' : ''}`} style={{ ...style, top: isSticky ? '0' : '5rem'  }}>
-    <div>
-      <p>SERVICES</p>
-      <h1>Design, Development, and Content. <br/> All-in-one.</h1>
-      <h3>Take your online presence to the next level with my expert web design and content creation services.</h3>
-    </div>
-    <HoverButton
-      title="GET IN TOUCH"
-      variant="black"
-    />
-  </div>
-);
+import BasicHeader from '../../../components/basicHeader/basicHeader';
 
 const Services = () => {
   const [isDesktop] = useState(false);
 
   return (
     <StickyContainer>
-      <div className='servicesFlex flexRow'>
+      <div className='defaultResponsiveFlex'>
         <div className="servicesTextContainer">
-          {isDesktop ? (
-            <Sticky topOffset={-5} bottomOffset={-250}>
-              {({ style, isSticky }) => {
-                if (!style) {
-                  return null;
-                }
-                return (
-                  <ServicesText style={{ ...style }} isSticky={isSticky} />
-                );
-              }}
-            </Sticky>
-          ) : (
-            <ServicesText />
-          )}
+        <BasicHeader>
+        <div>
+        <div>
+          <p>SERVICES</p>
+          <h1>Design, Development, and Content. <br/> All-in-one.</h1>
+          <h3 style={{paddingBottom: '1rem'}}>Take your online presence to the next level with my expert web design and content creation services.</h3>
+        </div>
+        <HoverButton
+          title="GET IN TOUCH"
+          variant="black"
+          link={'/contact'}
+        />
+      </div>
+        </BasicHeader>
         </div>
         <div className='servicesCards flexColumn'>
           {cardsData.map((item, index) => (
