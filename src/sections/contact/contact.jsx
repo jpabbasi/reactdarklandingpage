@@ -40,8 +40,8 @@ const Contact = () => {
                 <HoverButton icon={<TbCopy/>} style={{width: '100%'}}  variant='longButton white' title='me@pedroabbasi.com'/>
               <HoverButton style={{width: '100%'}}  variant='ghost' title='BOOK A CALL'/>
               <div className='zapButtons'>
-              <HoverButton icon={<TbBrandWhatsapp/>} style={{width: '100%'}}  variant='zap' title='WHATSAPP'/>
-              <HoverButton icon={<TbBrandTelegram/>} style={{width: '100%'}}  variant='telegram' title='TELEGRAM'/>
+              <HoverButton icon={<TbBrandWhatsapp/>} style={{width: '100%'}}  variant='zap' link='https://wa.me/+5545984284413' title='WHATSAPP'/>
+              <HoverButton icon={<TbBrandTelegram/>} style={{width: '100%'}}  variant='telegram' link='https://t.me/pedroabbasi' title='TELEGRAM'/>
               </div>
             </div>
           </div>
