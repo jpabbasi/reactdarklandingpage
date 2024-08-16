@@ -265,6 +265,18 @@ main {
     -webkit-text-fill-color: transparent;
   }
 
+  .gradientBackground-2 {
+    background: conic-gradient(
+      hsl(198, 74%, 50%),
+      hsl(145, 60%, 50%),
+    hsl(198, 74%, 50%)
+      ) fixed;
+      background-size: 200% 200%;
+      animation: moveGradient 4s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
   a {
     color: inherit;
     text-decoration: none;
