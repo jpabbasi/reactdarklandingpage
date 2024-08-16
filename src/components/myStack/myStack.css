@@ -1,0 +1,51 @@
+.stack-grid {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 itens por linha em telas maiores */
+  gap: 2rem;
+}
+
+.stack-item {
+  display: flex;
+  align-items: center; /* Alinha a imagem e o texto verticalmente */
+  gap: 1rem; /* Espaço entre a imagem e o texto */
+}
+
+.stackDots {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border: 1px dashed var(--color-light-grey);
+  width: 80px; /* Largura fixa para manter o quadrado perfeito */
+  height: 80px; /* Altura fixa para manter o quadrado perfeito */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.stackDots img {
+  max-width: 50px; /* Tamanho fixo para a imagem */
+  max-height: 50px; /* Tamanho fixo para a imagem */
+}
+
+.stackTexts {
+  display: flex;
+  flex-direction: column; /* Coloca o texto em uma coluna */
+  justify-content: space-between;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .stack-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 itens por linha em telas menores */
+  }
+
+  .stack-item {
+      flex-direction: column; /* Coloca o texto abaixo da imagem em telas menores */
+      align-items: center; /* Centraliza a imagem e o texto */
+  }
+
+  .stackTexts {
+      text-align: center; /* Centraliza o texto em telas menores */
+      margin-top: 0.5rem; /* Espaçamento entre a imagem e o texto */
+  }
+}
