@@ -14,6 +14,7 @@
   --color-grey: #7c7c7c;
   --color-grey-2: #969696;
   --color-light-grey: #e6e6e6;
+  --color-light-grey-2: #ccc;
   --transparent-1: rgba(255, 255, 255, 0.1);
   --transparent-2: rgba(255, 255, 255, 0.2);
   --transparent-3: #1a1a1a9f;
@@ -68,6 +69,7 @@ main {
 }
 
 .flexColumn {
+  gap: 4rem;
   display: flex;
   flex-direction: column;
 
@@ -90,6 +92,85 @@ main {
   background-position: -100%;
   transition: all 0.3s ease-in-out;
 }
+
+.defaultHeader {
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 5rem;
+}
+
+.defaultHeader h1 {
+  font-weight: normal;
+}
+
+.defaultHeader h3 {
+  font-weight: normal;
+}
+
+.defaultHeader p {
+  width: 60rem;
+  color: var(--color-grey-2);
+  font-size: 1.5rem;
+}
+
+.defaultHeader img {
+  width: 100%;
+  max-width: 90rem;
+}
+
+/* Small Devices */
+@media (max-width: 1025px) {
+  .defaultHeader h1 {
+      line-height: 3rem;
+      font-size: 3rem;
+  }
+
+  .defaultHeader p {
+      width: 20rem;
+      font-size: 1rem;
+  } }
+
+
+.defaultPadding {
+  padding: 5rem 35rem;
+}
+
+/* Small Devices */
+@media (max-width: 1024px)  {
+  .defaultPadding {
+    padding: 2rem;
+  }
+}
+/* Normal Devices */
+@media (min-width: 1025px) and (max-width: 2000px) {
+  .defaultPadding {
+    padding: 5rem 16rem;
+  }
+}
+
+.defaultResponsiveFlex {
+  padding-top: 4rem;
+  gap: 10rem;
+  align-items: stretch;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.defaultResponsiveFlex h3{
+  width: 30rem;
+}
+
+@media (max-width: 1024px) {
+  .defaultResponsiveFlex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .defaultResponsiveFlex h3{
+    width: auto;
+  }}
 
 .whiteBoard {
   padding: 3rem 35rem;
