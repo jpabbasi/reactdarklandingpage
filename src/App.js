@@ -9,6 +9,7 @@ import About from './sections/about/about'
 import WorkDetails from './sections/workDetails/workDetails';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Contact from './sections/contact/contact';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -60,7 +61,7 @@ function App() {
         <Route
           path="/work/:id"
           element={
-            <Layout scrollThresholds={{ default: 99 * window.innerHeight, medium: 99 * window.innerHeight, small: 99 * window.innerHeight }}>
+            <Layout scrollThresholds={{ default: 0.4 * window.innerHeight, medium: 0.6 * window.innerHeight, small: 0.5 * window.innerHeight }}>
               <WorkDetails />
             </Layout>
           }
@@ -70,6 +71,14 @@ function App() {
           element={
             <Layout scrollThresholds={{ default: 99 * window.innerHeight, medium: 99 * window.innerHeight, small: 99 * window.innerHeight }}>
               <About />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Layout scrollThresholds={{ default: 99 * window.innerHeight, medium: 99 * window.innerHeight, small: 99 * window.innerHeight }}>
+              <Contact />
             </Layout>
           }
         />
