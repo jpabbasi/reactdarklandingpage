@@ -1,0 +1,100 @@
+.howIWork {
+    padding-top: 3rem;
+}
+
+.howIWorkList {
+    gap: 2rem;
+}
+
+.howIWorkTopic {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+
+.howIWorkTopic p {
+    max-width: 40rem;
+}
+
+.howIWorkTopic h3 {
+    font-size: 1rem;
+    max-width: 20rem;
+}
+
+.titleNumberDisplay {
+  gap: 1rem;
+  display: flex;
+}
+
+.howIWorkCard {
+    padding: 3rem 0;
+}
+
+.qualifications {
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.qualifications:not(:last-child) {
+    border-bottom: 1px dashed var(--color-light-grey);
+}
+
+.qualificationsIcon {
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.aboutButtonFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* Media query para telas menores */
+@media (max-width: 1025px) {
+    .aboutButtonIcon {
+     margin-left: -0.6rem;   
+    }
+    .aboutButtonFlex {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .howIWorkTopic {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titleNumberDisplay {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .howIWorkTopic p {
+        max-width: 100%;
+    }
+    .qualifications {
+        flex-direction: column; /* Altera o layout para coluna em telas menores */
+        align-items: flex-start;
+    }
+
+    .qualificationsIcon {
+        flex-direction: column; /* Coloca o ícone, ano, curso e instituição em coluna */
+        align-items: flex-start;
+    }
+
+    .qualificationsIcon h2 {
+        margin-bottom: 0.5rem; /* Espaçamento entre o ano e o nome do curso */
+    }
+
+    .qualifications p {
+        margin-top: 0.5rem; /* Espaçamento entre o nome do curso e a instituição */
+    }
+}
