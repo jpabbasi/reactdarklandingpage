@@ -15,7 +15,7 @@ function Footer() {
           </h1>
         </div>
         <div className='contactButton'>
-        <HoverButton variant="arrow-inv" title="GET IN TOUCH"/>
+        <HoverButton link={'/contact'} variant="arrow-inv" title="GET IN TOUCH"/>
         </div>
       </div>
 

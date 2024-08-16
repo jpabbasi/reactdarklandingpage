@@ -21,5 +21,5 @@ export const buttons = [
 export const contact = {
     title: "LET'S TALK",
     icon: <TbMessage2 />,
-    link: '/letstalk',
+    link: '/contact',
 }

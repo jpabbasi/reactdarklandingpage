@@ -1,5 +1,5 @@
 import './about.css'
-import aboutImage from '../../../assets/portrait.png'
+import aboutImage from '../../../assets/portrait.jpg'
 import HoverButton from './../../../components/hoverButton/hoverButton';
 
 const About = () => {
@@ -8,7 +8,7 @@ const About = () => {
         <div className='innerAbout flexRow'>
             <img src={aboutImage} alt={`portrait`} className="homeImage" />
                 <div className='titleFlex flexColumn'>
-                    <h1>Transform your digital presence, elevate your career</h1>
+                    <h1 style={{color: 'var(--color-light)'}}>Transform your digital presence, elevate your career</h1>
                     <p>Your website is more than just an online presence;
                       it’s the cornerstone of your brand's success.
                       Allow me to craft a digital experience that not only
@@ -17,7 +17,7 @@ const About = () => {
                       I’ll build a website that drives results, enhances your
                       credibility, and propels your career to new heights. </p>
                     <div className='aboutButton'>
-                    <HoverButton variant="arrow-white" title="ABOUT ME"/>
+                    <HoverButton link={'/about'} variant="arrow-white" title="ABOUT ME"/>
                     </div>
                 </div>
         </div>

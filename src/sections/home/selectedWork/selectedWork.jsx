@@ -8,6 +8,7 @@ const SelectedWork = () => {
         <div className='flexRow blackTitle'>
         <h1>Selected Work</h1>
         <HoverButton
+        link={'/work'}
           title='SEE ALL'
           variant='arrow-black'
         />
