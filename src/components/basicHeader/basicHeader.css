@@ -1,0 +1,32 @@
+.basicHeader {
+    color: var(--color-primary);
+    align-items: flex-start;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box
+  }
+
+  /* Small Devices */
+@media (max-width: 1024px) {
+    .basicHeader {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .basicHeader.isSticky {
+        position: static;
+      }
+
+    .basicHeader {
+      position: static;
+    }
+}   
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .basicHeader {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 20px;
+    }
+  }
