@@ -26,6 +26,21 @@
   border-color: var(--transparent-2);
 }
 
+/* round Ghost Variant */
+.hoverButton.round-ghost {
+  border-radius: 100%;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--transparent-1);
+  border: 0.50px solid var(--transparent-2);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hoverButton.round-ghost:hover {
+  background-color: var(--transparent-2);
+  border-color: var(--transparent-2);
+}
+
 /* black Ghost Variant */
 .hoverButton.black-ghost {
   background-color: var(--transparent-3);
@@ -173,4 +188,34 @@
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
+}
+
+.longButtonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.longButtonText {
+  margin: 0 auto; /* Centraliza o texto */
+  text-align: center;
+  width: 100%; /* Garante que o texto ocupe a largura total */
+}
+
+.longButtonText .textUp,
+.longButtonText .textDown {
+  width: 100%; /* Garante que ambos ocupem a largura total */
+  text-align: center; /* Centraliza o texto dentro da largura disponível */
+}
+
+.zap {
+  background-color: var(--transparent-1);
+  border: 0.50px solid #25d366
+}
+
+.telegram {
+  background-color: var(--transparent-1);
+  border: 0.50px solid #24A1DE
 }
