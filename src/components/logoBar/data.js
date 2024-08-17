@@ -10,10 +10,10 @@ import mnh from '../../assets/mnh.webp'
 export const logos = [
   cs,
   znv,
-  mnh,
   w,
   am,
   ppl,
   mjd,
   bl,
+  mnh,
   ];
