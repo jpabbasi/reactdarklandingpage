@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { StickyContainer, Sticky } from 'react-sticky';
+import { StickyContainer} from 'react-sticky';
 import { cardsData } from './data';
 import Card from '../../../components/card/Card';
 import './services.css';
@@ -7,7 +6,6 @@ import HoverButton from '../../../components/hoverButton/hoverButton';
 import BasicHeader from '../../../components/basicHeader/basicHeader';
 
 const Services = () => {
-  const [isDesktop] = useState(false);
 
   return (
     <StickyContainer>
@@ -17,8 +15,8 @@ const Services = () => {
         <div>
         <div>
           <p>SERVICES</p>
-          <h1>Design, Development, and Content. <br/> All-in-one.</h1>
-          <h3 style={{paddingBottom: '1rem'}}>Take your online presence to the next level with my expert web design and content creation services.</h3>
+          <h1>Comprehensive Design, Development, and Strategic Solutions.</h1>
+          <h3 style={{paddingBottom: '1rem'}}>Delivering innovative solutions that drive performance and position your organization as a digital leader.</h3>
         </div>
         <HoverButton
           title="GET IN TOUCH"
