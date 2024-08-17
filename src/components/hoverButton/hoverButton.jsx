@@ -6,6 +6,16 @@ function HoverButton({ title, link = '#', icon, variant = 'default', onClick, st
   const isExternal = link && link.startsWith('http') && !link.includes(window.location.hostname);
   const target = isExternal ? '_blank' : undefined;
 
+  const handleClick = (e) => {
+    if (variant.includes('submit')) {
+      e.preventDefault(); // Previne a navegação padrão do Link
+      const form = e.target.closest('form');
+      onClick && onClick(e, form); // Chama o onClick, que poderia submeter o formulário
+    } else {
+      onClick()
+    }
+  };
+
   const renderIcon = () => {
     if (variant.includes('arrow-up')) {
       return <FiArrowUp className="icon" />;
@@ -28,8 +38,8 @@ function HoverButton({ title, link = '#', icon, variant = 'default', onClick, st
     } else {
       return (
         <div className={`hoverButtonTitle ${variant.includes('longButton') ? 'longButtonText' : ''}`}>
-          <span className="textUp">{title}</span>
-          <span className="textDown">{title}</span>
+          <span className={`${variant === 'ghost' ? 'gradientBackground' : ''} textUp`}>{title}</span>
+          <span className={`${variant === 'ghost' ? 'gradientBackground' : ''} textDown`}>{title}</span>
         </div>
       );
     }
@@ -38,9 +48,9 @@ function HoverButton({ title, link = '#', icon, variant = 'default', onClick, st
 
   return (
     <Link
-    target={target} // Usa target apenas se o link for externo
-    rel={isExternal ? 'noopener noreferrer' : undefined}
-      style={{ ...style}} to={link} onClick={onClick} className={`hoverButton ${variant} ${!title ? 'no-title' : ''}`}>
+      target={target}    rel={isExternal ? 'noopener noreferrer' : undefined}
+        style={{ ...style}} to={link}
+        {...(onClick && { onClick: handleClick })} className={`hoverButton ${variant} ${!title ? 'no-title' : ''}`}>
       <div className={`hoverButtonContent ${variant.includes('longButton') ? 'longButtonContent' : ''}`}>
         {renderIcon()}
         {renderText()}
