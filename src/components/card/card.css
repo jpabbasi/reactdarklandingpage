@@ -12,7 +12,7 @@
 
 .card.ghost {
     position: absolute;
-    background: var(--transparent-1);
+    background: var(--transparent-3);
     border: 1px solid var(--transparent-2);
     backdrop-filter: blur(10px);
 }
