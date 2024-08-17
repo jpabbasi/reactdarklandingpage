@@ -2,7 +2,7 @@ import './workDetails.css'
 import { useParams } from 'react-router-dom';
 import { cardsData } from './data';
 import Card from '../../components/card/Card';
-import BasicHeader from '../../components/basicHeader/basicHeader';
+import MyStack from '../../components/myStack/myStack'
 
 const WorkDetails = () => {
   const { id } = useParams();
@@ -33,16 +33,17 @@ const WorkDetails = () => {
               ))
             }
           </div>
+           <MyStack stacks={work.stacks}/>
           <div>
             <div className='flexColumn details'>
               <div className='defaultResponsiveFlex'>
                 <div className='flexColumn'>
                 {work.details.map((item) => (
-                  <BasicHeader>
+                  <div>
                     <p>{item.subtitle}</p>
                     <h1>{item.title}</h1>
                     <h3>{item.text}</h3>
-                  </BasicHeader>
+                  </div>
                 ))}
             </div>
             <div className='servicesCards flexColumn'>
