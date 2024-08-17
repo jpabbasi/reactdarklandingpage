@@ -9,6 +9,7 @@
 }
 
 .analyticsItem {
+    color: var(--color-primary);
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@
 }
 
 .servicesList {
+    color: var(--color-grey);
     padding: 5rem 0;
 }
 
@@ -26,7 +28,6 @@
 
 .servicesListFlex {
     display: flex;
-    justify-content: space-between;
 }
 
 .servicesListFlex p {
@@ -62,3 +63,9 @@
         width: 100%;
     }
   }  
+
+@media (min-width: 1026px) {
+    .serviceHeader {
+        width: 40rem;
+    }
+}

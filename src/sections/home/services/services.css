@@ -5,6 +5,7 @@
 }
 
 .cardTitle h2{
+  color: var(--color-primary);
   line-height: 2rem;
 }
 

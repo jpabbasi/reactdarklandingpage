@@ -83,4 +83,8 @@
     padding: 5rem 16rem;
     margin: 0 auto;
   }
+
+  .mainTitle h1 {
+    min-block-size: 25vh;
+  }
 }
