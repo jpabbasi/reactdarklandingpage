@@ -19,6 +19,8 @@
   --transparent-2: rgba(255, 255, 255, 0.2);
   --transparent-3: #1a1a1a9f;
   --border-radius: 8px;
+  --color-success: #4BB543;
+  --color-error: #b54343;
 }
 
 html {
@@ -37,7 +39,6 @@ h1 {
 }
 
 h2 {
-  color: var(--color-secondary);
   font-weight: normal;
 }
 
@@ -101,6 +102,7 @@ main {
 }
 
 .defaultHeader h1 {
+  line-height: 7rem;
   font-weight: normal;
 }
 
@@ -116,7 +118,7 @@ main {
 
 .defaultHeader img {
   width: 100%;
-  max-width: 90rem;
+  max-width: 80rem;
 }
 
 /* Small Devices */
@@ -255,27 +257,15 @@ main {
 
 .gradientBackground {
   background: conic-gradient(
-    hsl(60, 100%, 65%),
-    hsl(120, 100%, 55%),
-    hsl(60, 100%, 65%)
+    hsl(198, 74%, 50%),
+    hsl(145, 60%, 50%),
+  hsl(198, 74%, 50%)
     ) fixed;
     background-size: 200% 200%;
     animation: moveGradient 4s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  .gradientBackground-2 {
-    background: conic-gradient(
-      hsl(198, 74%, 50%),
-      hsl(145, 60%, 50%),
-    hsl(198, 74%, 50%)
-      ) fixed;
-      background-size: 200% 200%;
-      animation: moveGradient 4s ease infinite;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
 
   a {
     color: inherit;
