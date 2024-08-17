@@ -13,7 +13,7 @@ const SelectedWork = () => {
           variant='arrow-black'
         />
       </div>
-      <Works/>
+      <Works cards={2}/>
     </div>
   )
 }

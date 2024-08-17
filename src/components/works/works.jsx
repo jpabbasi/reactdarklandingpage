@@ -3,11 +3,13 @@ import Card from '../../components/card/Card';
 import { cardsData } from '../../sections/workDetails/data';
 import { Link } from 'react-router-dom';
 
-const Works = () => {
+const Works = ({ cards }) => {
+  const cardsToRender = cards ? cardsData.slice(0, cards) : cardsData;
+
   return (
     <div className='selectedWork'>
       <div className='imageCardContainer'>
-        {cardsData.map((item) => (
+        {cardsToRender.map((item) => (
           <Link to={`/work/${item.id}`} key={item.id}>
             <div className="imageCard" style={{ backgroundImage: `url(${item.image})`, zIndex: item.id }}>
               <Card className="cardLeft" variant="ghost">
