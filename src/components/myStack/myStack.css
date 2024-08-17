@@ -27,6 +27,10 @@
   max-height: 50px; /* Tamanho fixo para a imagem */
 }
 
+.greyFilter img {
+  filter: grayscale(100%)
+}
+
 .stackTexts {
   display: flex;
   flex-direction: column; /* Coloca o texto em uma coluna */

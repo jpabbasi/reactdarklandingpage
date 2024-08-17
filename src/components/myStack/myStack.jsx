@@ -1,12 +1,12 @@
 import './myStack.css'
 
-const MyStack = ({stacks}) => {
+const MyStack = ({stacks, grey}) => {
   return (
     <div className="stack-container">
       <div className="stack-grid">
         {stacks.map((item, index) => (
             <div className="stack-item">
-                <div className='stackDots' key={index}>
+                <div className={`${grey ? 'greyFilter' : ''} stackDots`} key={index}>
                 <img src={item.icon} alt={item.name} />
                 </div>
                 <div className='stackTexts'>
