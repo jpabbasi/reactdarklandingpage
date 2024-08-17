@@ -107,7 +107,7 @@ function Header({ scrollThresholds }) {
               onClick={handleLinkClick}
               icon={item.icon}
               title={item.title}
-              variant='black-ghost'
+              variant='longButton black'
             />
           </div>))}
         </div>
