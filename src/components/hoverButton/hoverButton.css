@@ -17,8 +17,45 @@
 .hoverButton.ghost {
   height: 2rem;
   background-color: var(--transparent-1);
-  border: 0.50px solid var(--transparent-1);
+  position: relative;
+  border-radius: var(--border-radius);
+  border: 0.50px solid transparent;
+  overflow: hidden;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hoverButton.ghost::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    hsl(198, 74%, 50%),
+    hsl(145, 60%, 50%),
+    hsl(198, 74%, 50%)
+  );
+  background-size: 200% 200%;
+  animation: moveGradient 4s ease infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude; /* This might require adjustment based on browser support */
+}
+
+.hoverButton.ghost::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background-color: var(--transparent-1); /* Keeps the background of the button */
+  z-index: 1; /* Ensure this is above the gradient border */
 }
 
 .hoverButton.ghost:hover {
@@ -43,8 +80,8 @@
 
 /* black Ghost Variant */
 .hoverButton.black-ghost {
-  background-color: var(--transparent-3);
-  border: 0.50px solid var(--transparent-1);
+  background-color: var(--transparent-1);
+  border: 0.50px solid var(--transparent-2);
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -199,9 +236,9 @@
 }
 
 .longButtonText {
-  margin: 0 auto; /* Centraliza o texto */
+  margin: 0 auto; 
   text-align: center;
-  width: 100%; /* Garante que o texto ocupe a largura total */
+  width: 70%; /* Garante que o texto ocupe a largura total */
 }
 
 .longButtonText .textUp,
