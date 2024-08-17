@@ -5,7 +5,7 @@ import am from '../../assets/am.webp'
 import ppl from '../../assets/ppl.webp'
 import mjd from '../../assets/mjd.webp'
 import bl from '../../assets/bl.webp'
-import mnh from '../../assets/mnh.png'
+import mnh from '../../assets/mnh.webp'
 
 export const logos = [
   cs,
