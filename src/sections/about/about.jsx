@@ -1,6 +1,6 @@
 import './about.css'
 import {analyticsData} from '../services/data'
-import {process, cardsData} from './data'
+import {process, certData, voluntData} from './data'
 import Card from '../../components/card/Card'
 import MyStack from '../../components/myStack/myStack';
 import HoverButton from '../../components/hoverButton/hoverButton';
@@ -15,9 +15,8 @@ const About = () => {
     <div>
       <div style={{paddingBottom: '3rem'}} className='defaultHeader flexColumn'>
       <h3 className='gradientBackground'>MY STORY</h3>
-        <h1>I Bring Your Website <br/> Vision to Life</h1>
-        <p>Your website is an extension of your brand,
-          and I’m here to help you make it the best it can be. </p>
+        <h1>Shaping the Future <br/>of Digital Experiences</h1>
+        <p>Bridging creativity and technology to craft your digital identity.</p>
       </div>
 
       <div className='whiteBoard'>
@@ -34,9 +33,8 @@ const About = () => {
 
         <div className='howIWork centeredText'>
           <h3>HOW I WORK</h3>
-          <h1>My Approach to a successfull Partnership</h1>
-          <p>I believe in a collaborative process that puts
-          your needs first, and delivers outstanding results every time. </p>
+          <h1>Crafting Strong Partnerships for Exceptional Results</h1>
+          <p>I prioritize a collaborative process that centers on your goals, ensuring exceptional results and a strong, enduring partnership.</p>
           </div>
               <MyStack stacks={stackItems}/>
           <div style={{paddingTop: '5rem'}}>
@@ -49,7 +47,7 @@ const About = () => {
                   </div>
                   <div>
                     <h2>{item.title}</h2>
-                    <h3>Hey, just wondering if you got your photos printed? bogos binted? what</h3>
+                    <h3>{item.subtitle}</h3>
                   </div>
                 </div>
                   <p>{item.desc}</p>
@@ -62,7 +60,7 @@ const About = () => {
               <h1>Qualifications</h1>
               <h3>In general, I’m a big fan of learning by doing and extensive practice</h3>
               <div>
-              {cardsData.map((item) => (
+              {certData.map((item) => (
                 <div className='qualifications flexRow'>
                   <div className='qualificationsIcon'>
                     {item.icon}
@@ -76,19 +74,43 @@ const About = () => {
               <h3>More than 25 online courses since 2017. So I won’t add all here.</h3>
               </Card>
             </div>
+            <div className='howIWorkCard'>
+              <Card className='flexColumn' fade={"fade-up"}>
+              <h1>Volunteering</h1>
+              <div>
+              {voluntData.map((item) => (
+                <div className='qualifications flexRow'>
+                  <div className='qualificationsIcon'>
+                    {item.icon}
+                    <h2>{item.title}</h2>
+                    <p>{item.source}</p>
+                  </div>
+                  <p>{item.date}</p>
+                </div>
+              ))}
+              </div>
+              </Card>
+            </div>
             {<Reviews/>}
             <div data-aos="fade-up" className='about'>
         <div className='innerAbout flexRow'>
             <img src={aboutImage} alt={`portrait`} className="homeImage" />
                 <div className='titleFlex flexColumn'>
-                    <h1 style={{color: 'var(--color-light)'}}>Transform your digital presence, elevate your career</h1>
-                    <p>Your website is more than just an online presence;
-                      it’s the cornerstone of your brand's success.
-                      Allow me to craft a digital experience that not only
-                      mirrors your unique vision but also positions you as
-                      a leader in your industry. With my specialized expertise,
-                      I’ll build a website that drives results, enhances your
-                      credibility, and propels your career to new heights. </p>
+                    <h1 style={{color: 'var(--color-light)'}}>Innovative Front-End Engineer with a Strategic Vision</h1>
+                    <h3>I'm Pedro Abbasi, a Front-End Engineer with a strong blend of technical expertise and creative insight.</h3>
+                    <p>
+                      With over seven years of experience in the tech industry, I’ve had the privilege of collaborating with
+                      leading companies to enhance their digital platforms, streamline workflows, and drive innovation. My work
+                      is characterized by a deep commitment to excellence, whether I’m architecting complex systems or designing
+                      intuitive user interfaces.
+                      </p>
+                      <h3>
+                      I believe in building strong partnerships and fostering collaboration.
+                      My ability to bridge the gap between product management,
+                      UX/UI design, and development has consistently proven valuable in every project
+                      I undertake. I’m passionate about technology and dedicated to delivering results that exceed
+                      expectations, making me a trusted leader in the field. Whether working on large-scale corporate
+                      projects or personal initiatives, I’m driven by a desire to push boundaries and <i>create impactful digital experiences.</i> </h3>
                     <div className='aboutButtonFlex'>
                       <div style={{display: 'flex', gap: '0.6rem'}}>
                       {socialLinks.map((item) => (
