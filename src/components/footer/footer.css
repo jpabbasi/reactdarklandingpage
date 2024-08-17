@@ -136,6 +136,10 @@ footer {
   footer {
     padding: 5rem 16rem;
   }
+
+  .contact h1 {
+    min-block-size: 28vh;
+  }
 }
 
 @media (min-width: 2000px) {
