@@ -1,4 +1,4 @@
-import servicesHeader from '../../assets/servicesHeader.png'
+import servicesHeader from '../../assets/servicesHeader.webp'
 import './services.css'
 import { analyticsData, servicesData } from './data'
 import HoverButton from './../../components/hoverButton/hoverButton';
