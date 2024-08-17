@@ -23,6 +23,10 @@
     align-self: center;
 }
 
+.titleFlex h3 {
+  line-height: 1.9rem;
+}
+
 .aboutButton {
     display: flex;
     align-items: center;
