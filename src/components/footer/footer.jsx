@@ -11,7 +11,7 @@ function Footer() {
         <p>LET'S TALK</p>
         <div className='gradientBackground'>
           <h1>
-          Unlock your potential with a <br/>website designed to <b>win</b>.
+          Unlock your potential with a <br/>website engineered for <b>success</b>.
           </h1>
         </div>
         <div className='contactButton'>
