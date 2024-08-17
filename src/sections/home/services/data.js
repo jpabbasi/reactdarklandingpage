@@ -12,31 +12,23 @@ export const cardsData =
     {
         title: 'WEB DEVELOPMENT',
         icons: [TbBrandReact, TbBrandFramer, TbBrandWordpress],
-        desc: `Craft high-performance websites using cutting-edge
-                technologies like React, Framer, and WordPress.
-                My focus is on delivering robust CMS integration,
-                seamless user experiences, and optimized performance
-                to elevate your online presence and drive measurable results.`
+        desc: `Develop high-performance websites using advanced technologies like React,
+        Framer, and WordPress. My expertise ensures robust CMS integration, seamless user experiences,
+        and optimized performance, empowering your digital presence to achieve measurable success.`
     },{
         title: 'APP DEVELOPMENT',
         icons: [TbBrandReactNative, TbBrandFirebase],
-        desc: `Develop versatile mobile applications using React Native, 
-                ensuring top-tier performance across both iOS and Android platforms.
-                I specialize in creating apps that are not only visually appealing but
-                also user-friendly and safe, providing a seamless experience for your
-                users on any device.`
+        desc: `Engineer versatile mobile applications with React Native, delivering exceptional
+        performance across iOS and Android platforms. I specialize in creating apps that are visually compelling,
+        user-friendly, and secure, providing a flawless experience on any device.`
     },{
         title: 'WEB DESIGN',
         icons: [TbBrandFigma],
-        desc: `Deliver premium, bespoke web design services tailored to your brand’s
-                unique identity. My designs are clean, sharp, and visually compelling,
-                engineered to engage users while providing an intuitive and fluid browsing
-                experience that maximizes conversions.`
+        desc: `Craft bespoke web designs that resonate with your brand’s identity. My designs are meticulously
+        engineered to be visually striking and intuitive, enhancing user engagement and driving meaningful conversions.`
     },{
         title: 'CONTENT & SEO',
         icons: [TbDeviceDesktopCode, TbDeviceMobileDollar],
-        desc: `Offer comprehensive content creation and SEO services
-                that enhance your online authority. I produce high-quality,
-                engaging content optimized for search engines, helping your business
-                connect with the right audience and drive sustainable growth.`}
+        desc: `Elevate your online authority with strategic content creation and SEO. I produce high-quality,
+        optimized content that connects with your target audience, driving sustainable growth and enhancing your brand’s visibility.`}
 ]
