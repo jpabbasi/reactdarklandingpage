@@ -43,6 +43,7 @@
 }
 
 .cardLeft p {
+  max-width: fit-content;
   font-weight: lighter;
 }
 
