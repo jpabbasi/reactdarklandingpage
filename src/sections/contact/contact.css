@@ -55,12 +55,13 @@
 }
 
 .contactForm h1 {
-  font-size: 48px;
+  font-size: 36px;
   line-height: 1;
   margin-bottom: 2rem;
 }
 
 .contactFormElements {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,6 +103,10 @@
   border: 1px solid var(--color-grey);
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .stackedCardsContainer {
@@ -183,7 +188,7 @@
 }
 
 
-@media (max-width: 601px) {
+@media (max-width: 600px) {
 .contactCardsFlex {
   height: 100rem;
   flex-direction: column;
