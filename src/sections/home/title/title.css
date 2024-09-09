@@ -28,7 +28,7 @@
   display: block;
   object-fit: cover;
   mix-blend-mode: screen;
-  filter: brightness(1.2) contrast(1.2) grayscale(100%);
+  filter: contrast(1.2) grayscale(100%);
 }
 
 .imageContainer {

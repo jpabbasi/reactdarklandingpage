@@ -4,7 +4,7 @@ import {process, certData, voluntData} from './data'
 import Card from '../../components/card/Card'
 import MyStack from '../../components/myStack/myStack';
 import HoverButton from '../../components/hoverButton/hoverButton';
-import aboutImage from '../../assets/portrait.jpg';
+import aboutImage from '../../assets/portrait3.png';
 import {socialLinks} from '../../components/footer/data'
 import {stackItems} from '../../components/myStack/data'
 import Reviews from '../home/reviews/reviews';
@@ -94,7 +94,7 @@ const About = () => {
             {<Reviews/>}
             <div data-aos="fade-up" className='about'>
         <div className='innerAbout flexRow'>
-            <img src={aboutImage} alt={`portrait`} className="homeImage" />
+            <img src={aboutImage} alt={`portrait`} className="homeImage aboutImage" />
                 <div className='titleFlex flexColumn'>
                     <h1 style={{color: 'var(--color-light)'}}>Innovative Front-End Engineer with a Strategic Vision</h1>
                     <h3>I'm Pedro Abbasi, a Front-End Engineer with a strong blend of technical expertise and creative insight.</h3>

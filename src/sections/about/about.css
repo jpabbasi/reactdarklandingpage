@@ -57,6 +57,11 @@
     align-items: center;
 }
 
+.aboutImage {
+    filter: brightness(0.8) contrast(1.5) grayscale(100%);
+    padding-right: 2rem;
+}
+
 
 /* Media query para telas menores */
 @media (max-width: 1025px) {
