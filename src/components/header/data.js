@@ -1,7 +1,6 @@
 import { TbBriefcase2 } from "react-icons/tb";
 import { TbDeviceImac } from "react-icons/tb";
 import { TbLego } from "react-icons/tb";
-import { TbMessage2 } from "react-icons/tb";
 
 export const buttons = [
     {id: 1,
