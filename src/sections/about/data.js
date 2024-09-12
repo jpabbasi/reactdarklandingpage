@@ -26,8 +26,8 @@ export const process = [
 export const certData = [
         {
             icon: <LuGraduationCap/>,
-            title: 'Computer Analysis and Engineering',
-            date: '2021',
+            title: `Bachelor's in Design and Systems Development`,
+            date: '2022',
             source: 'Foundation Assis Gurgacz University'
         },
         {
@@ -38,7 +38,7 @@ export const certData = [
         },
         {
             icon: <TbAward/>,
-            title: 'Computer/Information Technology Administration and Management',
+            title: 'Technical Degree in Systems Development',
             date: '2017',
             source: 'SENAI/SC'
         },
