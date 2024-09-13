@@ -18,3 +18,4 @@ In the project directory, you can run:
 - React Icons
 - React Sticky
 - Zod
+- Aos
