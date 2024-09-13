@@ -9,7 +9,6 @@ In the project directory, you can run:
 ### `npm start`
 - Runs the app in development mode.
 - Visit [http://localhost:3000](http://localhost:3000) to check it out.
-- Hot-reloads on changes and displays lint errors in the console.
 
 ### `npm run build`
 - Creates an optimized production build in the `build` folder.
