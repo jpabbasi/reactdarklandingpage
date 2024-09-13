@@ -1,27 +1,21 @@
-wip
+# Project Overview
+
+Production: [www.pedroabbasi.com](http://www.pedroabbasi.com)
 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
+- Runs the app in development mode.
+- Visit [http://localhost:3000](http://localhost:3000) to check it out.
+- Hot-reloads on changes and displays lint errors in the console.
 
 ### `npm run build`
+- Creates an optimized production build in the `build` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-### `technologies`
-    - react
-    - react-icons
-    - react-sticky
+## Technologies Used
+- React
+- React Icons
+- React Sticky
+- Zod
