@@ -78,7 +78,7 @@ const Contact = () => {
               <h1>Let’s <b className='gradientBackground'>get in touch</b>.</h1>
               <form
               className="contactFormElements"
-              action={`https://formspree.io/f/${process.env.FORMSPREE_ID}`}
+              action={`https://formspree.io/f/${process.env.REACT_APP_FORMSPREE_ID}`}
               method="POST"
               noValidate 
               target="_blank" 
